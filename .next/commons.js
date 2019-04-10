@@ -191,39 +191,93 @@ function Header() {
       }
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
-      { prefetch: true, href: '/', __source: {
+      'ul',
+      {
+        __source: {
           fileName: _jsxFileName,
           lineNumber: 7
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'a',
+        'li',
         {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 8
           }
         },
-        'Index'
-      )
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
-      { prefetch: true, href: '/movies', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        }
-      },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
+          { prefetch: true, href: '/', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 8
+            }
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'a',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 9
+              }
+            },
+            'Index'
+          )
+        )
+      ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'a',
+        'li',
         {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 11
           }
         },
-        'Movies'
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
+          { prefetch: true, href: '/movies', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 11
+            }
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'a',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 12
+              }
+            },
+            'Movies'
+          )
+        )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'li',
+        {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 14
+          }
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
+          { prefetch: true, href: '/properties', __source: {
+              fileName: _jsxFileName,
+              lineNumber: 14
+            }
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'a',
+            {
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 15
+              }
+            },
+            'Properties'
+          )
+        )
       )
     )
   );
@@ -314,7 +368,7 @@ MainLayout.propTypes = {
 
 /***/ }),
 
-/***/ "./components/movieList.js":
+/***/ "./components/propertyDetail.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -322,82 +376,127 @@ MainLayout.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("./node_modules/next/node_modules/prop-types/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__server_routes__ = __webpack_require__("./server/routes.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__server_routes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__server_routes__);
-var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/components/movieList.js';
+var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/components/propertyDetail.js';
 
 (function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
 
-  enterModule && enterModule(module);
+    enterModule && enterModule(module);
 })();
 
 
 
 
+function propertyDetail(_ref) {
+    var properties = _ref.properties;
 
-function MovieList(_ref) {
-  var movies = _ref.movies;
-
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'div',
-    {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 7
-      }
-    },
-    movies.map(function (movie) {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'h1',
-        { key: movie.id, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 9
-          }
+    console.log("propertyDetail  ==>>", properties);
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        {
+            __source: {
+                fileName: _jsxFileName,
+                lineNumber: 8
+            }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
-          { route: '/movies/' + movie.id, __source: {
-              fileName: _jsxFileName,
-              lineNumber: 10
-            }
-          },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'a',
+            'h1',
             {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 11
-              }
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 9
+                }
             },
-            movie.title
-          )
+            'Propety Detail'
         )
-      );
-    })
-  );
+    )
+
+    // <div role="tabpanel" class="tab-pane active" id="propertyDetails">
+    //     <div class="title text-left">
+    //         <h3>{this.props.country.propertyData[0].title}</h3>
+    //     </div>
+    //     <table class="table table-border-none">
+    //         <tbody>
+    //             <tr>
+    //                 <td>Listing Price</td>
+    //                 <td class="font-lg">
+    //                     <span>{this.props.country.propertyData[0].price}</span>
+    //                 </td>
+    //             </tr>
+    //         </tbody>
+    //     </table>
+    //     <div class="title-border">
+    //         <h4>PROPERTY INFORMATION</h4>
+    //     </div>
+    //     <table class="table table-border-none">
+    //         <tbody>
+    //             <tr>
+    //                 <td>Property Type</td>
+    //                 <td>{this.props.country.propertyData[0].listing_group}</td>
+    //             </tr>
+    //         </tbody>
+    //     </table>
+    //     <div class="title-border">
+    //         <h4>DETAILS</h4>
+    //     </div>
+    //     <table class="table table-border-none">
+    //         <tbody>
+    //             <tr>
+    //                 <td>Building Square Feet</td>
+    //                 <td>
+    //                     <span>{this.props.country.propertyData[0].square_feet}</span>
+    //                 </td>
+    //             </tr>
+    //             <tr>
+    //                 <td>Cap Rate</td>
+    //                 <td>
+    //                     <span>{this.props.country.propertyData[0].cap_rate}</span>
+    //                 </td>
+    //             </tr>
+    //         </tbody>
+    //     </table>
+    //     <div>
+    //         <div class="title-border">
+    //             <h4>DESCRIPTION</h4>
+    //         </div>
+    //         <div class="mr-bottom-20">
+    //             <p>
+    //                 {this.props.country.propertyData[0].description}
+    //             </p>
+    //         </div>
+    //     </div>
+    // </div>
+    ;
 }
 
-MovieList.propTypes = {
-  movies: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired
+propertyDetail.propTypes = {
+    properties: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired
 };
 
-var _default = MovieList;
-/* harmony default export */ __webpack_exports__["a"] = (_default);
+// MovieList.propTypes = {
+//     movies: PropTypes.array.isRequired,
+//   };
+
+propertyDetail.defaultProps = {
+    properties: {}
+};
+
+var _default = propertyDetail;
+/* unused harmony default export */ var _unused_webpack_default_export = (_default);
 ;
 
 (function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
 
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
 
-  if (!reactHotLoader) {
-    return;
-  }
+    if (!reactHotLoader) {
+        return;
+    }
 
-  reactHotLoader.register(MovieList, 'MovieList', '/home/sachin/Documents/react/react-nextjs-ssr/components/movieList.js');
-  reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/components/movieList.js');
-  leaveModule(module);
+    reactHotLoader.register(propertyDetail, 'propertyDetail', '/home/sachin/Documents/react/react-nextjs-ssr/components/propertyDetail.js');
+    reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/components/propertyDetail.js');
+    leaveModule(module);
 })();
 
 ;
@@ -456,7 +555,7 @@ function propertyList(_ref) {
                 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
-                    { route: "/properties/9635", __source: {
+                    { route: "/property/" + 9635, __source: {
                             fileName: _jsxFileName,
                             lineNumber: 9
                         }
@@ -483,7 +582,7 @@ function propertyList(_ref) {
                 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
-                    { route: "/properties/12681", __source: {
+                    { route: "/property/12681", __source: {
                             fileName: _jsxFileName,
                             lineNumber: 10
                         }
@@ -510,7 +609,7 @@ function propertyList(_ref) {
                 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
-                    { route: "/properties/12764", __source: {
+                    { route: "/property/12764", __source: {
                             fileName: _jsxFileName,
                             lineNumber: 11
                         }
@@ -537,7 +636,7 @@ function propertyList(_ref) {
                 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
-                    { route: "/properties/11169", __source: {
+                    { route: "/property/11169", __source: {
                             fileName: _jsxFileName,
                             lineNumber: 12
                         }
@@ -564,7 +663,7 @@ function propertyList(_ref) {
                 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
-                    { route: "/properties/12713", __source: {
+                    { route: "/property/12713", __source: {
                             fileName: _jsxFileName,
                             lineNumber: 13
                         }
@@ -591,7 +690,7 @@ function propertyList(_ref) {
                 },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
-                    { route: "/properties/6988", __source: {
+                    { route: "/property/6988", __source: {
                             fileName: _jsxFileName,
                             lineNumber: 14
                         }
@@ -742,12 +841,16 @@ function destroy(url) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return normalize; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return moviesSchema; });
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return normalize; });
+/* unused harmony export moviesSchema */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return moviesArraySchema; });
+/* unused harmony export propertiesSchema */
+/* unused harmony export propertiesArraySchema */
+/* unused harmony export propertySchema */
+/* unused harmony export propertyArraySchema */
 /* unused harmony export usersSchema */
 /* unused harmony export organizationsSchema */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return reposSchema; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return reposSchema; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_normalizr__ = __webpack_require__("./node_modules/normalizr/dist/normalizr.es.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__parseResponse__ = __webpack_require__("./libs/parseResponse.js");
 (function () {
@@ -764,6 +867,13 @@ var normalize = function normalize(response, _schema) {
 };
 var moviesSchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].Entity('movies');
 var moviesArraySchema = [moviesSchema];
+
+var propertiesSchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].Entity('properties');
+var propertiesArraySchema = [propertySchema];
+
+var propertySchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].Entity('property');
+var propertyArraySchema = [propertySchema];
+
 var usersSchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].Entity('users');
 var organizationsSchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].Entity('organizations');
 var reposSchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].Entity('repos', {
@@ -784,6 +894,10 @@ var reposSchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].
   reactHotLoader.register(normalize, 'normalize', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
   reactHotLoader.register(moviesSchema, 'moviesSchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
   reactHotLoader.register(moviesArraySchema, 'moviesArraySchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
+  reactHotLoader.register(propertiesSchema, 'propertiesSchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
+  reactHotLoader.register(propertiesArraySchema, 'propertiesArraySchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
+  reactHotLoader.register(propertySchema, 'propertySchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
+  reactHotLoader.register(propertyArraySchema, 'propertyArraySchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
   reactHotLoader.register(usersSchema, 'usersSchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
   reactHotLoader.register(organizationsSchema, 'organizationsSchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
   reactHotLoader.register(reposSchema, 'reposSchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
@@ -50308,120 +50422,6 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/movies.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__withReduxSaga__ = __webpack_require__("./withReduxSaga/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_head__ = __webpack_require__("./components/head.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_mainLayout__ = __webpack_require__("./components/mainLayout.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_movieList__ = __webpack_require__("./components/movieList.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__store__ = __webpack_require__("./store/index.js");
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/pages/movies.js';
-
-(function () {
-  var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
-
-  enterModule && enterModule(module);
-})();
-
-
-
-
-
-
-
-
-function Movies(props) {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    __WEBPACK_IMPORTED_MODULE_3__components_mainLayout__["a" /* default */],
-    {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-      }
-    },
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_head__["a" /* default */], { title: 'Movies', __source: {
-        fileName: _jsxFileName,
-        lineNumber: 11
-      }
-    }),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'h1',
-      {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        }
-      },
-      'Movies'
-    ),
-    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_movieList__["a" /* default */], _extends({}, props, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      }
-    }))
-  );
-}
-
-function mapStateToProps(state) {
-  return {
-    movies: state.movies.list.map(function (id) {
-      return state.entities.movies[id];
-    }) || [],
-    isFetching: state.movies.isFetching
-  };
-}
-
-var _default = Object(__WEBPACK_IMPORTED_MODULE_1__withReduxSaga__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_5__store__["a" /* default */], mapStateToProps)(Movies, { type: 'GET_MOVIES' });
-
-/* harmony default export */ __webpack_exports__["default"] = (_default);
-;
-
-(function () {
-  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
-
-  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
-
-  if (!reactHotLoader) {
-    return;
-  }
-
-  reactHotLoader.register(Movies, 'Movies', '/home/sachin/Documents/react/react-nextjs-ssr/pages/movies.js');
-  reactHotLoader.register(mapStateToProps, 'mapStateToProps', '/home/sachin/Documents/react/react-nextjs-ssr/pages/movies.js');
-  reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/pages/movies.js');
-  leaveModule(module);
-})();
-
-;
-    (function (Component, route) {
-      if(!Component) return
-      if (false) return
-      module.hot.accept()
-      Component.__route = route
-
-      if (module.hot.status() === 'idle') return
-
-      var components = next.router.components
-      for (var r in components) {
-        if (!components.hasOwnProperty(r)) continue
-
-        if (components[r].Component.__route === route) {
-          next.router.update(r, Component)
-        }
-      }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/movies")
-  
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
-
-/***/ }),
-
 /***/ "./pages/properties.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -50486,14 +50486,16 @@ function Properties(props) {
 
 function mapStateToProps(state) {
     return {
-        movies: state.movies.list.map(function (id) {
-            return state.entities.movies[id];
-        }) || [],
-        isFetching: state.movies.isFetching
+
+        // movies: state.properties.list.map(id => state.entities.properties[id]) || [],
+        //isFetching: state.properties.isFetching,
+
+        movies: state.properties.list || [],
+        isFetching: state.properties.isFetching
     };
 }
 
-var _default = Object(__WEBPACK_IMPORTED_MODULE_1__withReduxSaga__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_5__store__["a" /* default */], mapStateToProps)(Properties, { type: 'GET_MOVIES' });
+var _default = Object(__WEBPACK_IMPORTED_MODULE_1__withReduxSaga__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_5__store__["a" /* default */], mapStateToProps)(Properties, { type: 'GET_PROPERTY' });
 
 /* harmony default export */ __webpack_exports__["default"] = (_default);
 ;
@@ -50536,6 +50538,436 @@ var _default = Object(__WEBPACK_IMPORTED_MODULE_1__withReduxSaga__["a" /* defaul
 
 /***/ }),
 
+/***/ "./pages/property.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("./node_modules/next/node_modules/prop-types/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_Components_mainLayout__ = __webpack_require__("./components/mainLayout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__withReduxSaga__ = __webpack_require__("./withReduxSaga/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_Components_propertyDetail__ = __webpack_require__("./components/propertyDetail.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__store__ = __webpack_require__("./store/index.js");
+var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/pages/property.js';
+
+(function () {
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
+
+    enterModule && enterModule(module);
+})();
+
+
+
+
+
+
+
+
+function Property(props) {
+    console.log("Property==>>>@@@@", props);
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_2_Components_mainLayout__["a" /* default */],
+        {
+            __source: {
+                fileName: _jsxFileName,
+                lineNumber: 11
+            }
+        },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'h1',
+            {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 12
+                }
+            },
+            'Property Details'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'section',
+            { 'class': 'about-section', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 15
+                }
+            },
+            props.property.length ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { role: 'tabpanel', 'class': 'tab-pane active', id: 'propertyDetails', __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 19
+                    }
+                },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { 'class': 'title text-left', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 20
+                        }
+                    },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'h3',
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 21
+                            }
+                        },
+                        props.property[0].title
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'table',
+                    { 'class': 'table table-border-none', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 23
+                        }
+                    },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'tbody',
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 24
+                            }
+                        },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'tr',
+                            {
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 25
+                                }
+                            },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'td',
+                                {
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 26
+                                    }
+                                },
+                                'Listing Price'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'td',
+                                { 'class': 'font-lg', __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 27
+                                    }
+                                },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'span',
+                                    {
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 28
+                                        }
+                                    },
+                                    props.property[0].price
+                                )
+                            )
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { 'class': 'title-border', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 33
+                        }
+                    },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'h4',
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 34
+                            }
+                        },
+                        'PROPERTY INFORMATION'
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'table',
+                    { 'class': 'table table-border-none', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 36
+                        }
+                    },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'tbody',
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 37
+                            }
+                        },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'tr',
+                            {
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 38
+                                }
+                            },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'td',
+                                {
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 39
+                                    }
+                                },
+                                'Property Type'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'td',
+                                {
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 40
+                                    }
+                                },
+                                props.property[0].listing_group
+                            )
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { 'class': 'title-border', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 44
+                        }
+                    },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'h4',
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 45
+                            }
+                        },
+                        'DETAILS'
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'table',
+                    { 'class': 'table table-border-none', __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 47
+                        }
+                    },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'tbody',
+                        {
+                            __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 48
+                            }
+                        },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'tr',
+                            {
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 49
+                                }
+                            },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'td',
+                                {
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 50
+                                    }
+                                },
+                                'Building Square Feet'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'td',
+                                {
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 51
+                                    }
+                                },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'span',
+                                    {
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 52
+                                        }
+                                    },
+                                    props.property[0].square_feet
+                                )
+                            )
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'tr',
+                            {
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 55
+                                }
+                            },
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'td',
+                                {
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 56
+                                    }
+                                },
+                                'Cap Rate'
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                'td',
+                                {
+                                    __source: {
+                                        fileName: _jsxFileName,
+                                        lineNumber: 57
+                                    }
+                                },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'span',
+                                    {
+                                        __source: {
+                                            fileName: _jsxFileName,
+                                            lineNumber: 58
+                                        }
+                                    },
+                                    props.property[0].cap_rate
+                                )
+                            )
+                        )
+                    )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    {
+                        __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 63
+                        }
+                    },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { 'class': 'title-border', __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 64
+                            }
+                        },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'h4',
+                            {
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 65
+                                }
+                            },
+                            'DESCRIPTION'
+                        )
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        { 'class': 'mr-bottom-20', __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 67
+                            }
+                        },
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            'p',
+                            {
+                                __source: {
+                                    fileName: _jsxFileName,
+                                    lineNumber: 68
+                                }
+                            },
+                            props.property[0].description
+                        )
+                    )
+                )
+            ) : null
+        )
+    );
+}
+
+Property.propTypes = {
+    url: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
+};
+
+function mapStateToProps(state, ownProps) {
+    var url = ownProps.url;
+
+    var id = url.query.id;
+    console.log("state properties ==>>>>", state.properties);
+    var property = state.properties.list || {};
+    console.log("moviemoviemovie==>>>", property);
+    return {
+        property: property
+    };
+
+    // const { url } = ownProps;
+    // const id = url.query.id;
+    // console.log("state.entities==>>>", state.entities)
+    // const property = state.properties[id] || {};
+    // return {
+    //     property,
+    // };
+
+}
+
+var _default = Object(__WEBPACK_IMPORTED_MODULE_3__withReduxSaga__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_5__store__["a" /* default */], mapStateToProps)(Property, {
+    server: { type: 'GET_PROPERTY_SERVER' },
+    client: { type: 'GET_PROPERTY' }
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (_default);
+;
+
+(function () {
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
+
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
+
+    if (!reactHotLoader) {
+        return;
+    }
+
+    reactHotLoader.register(Property, 'Property', '/home/sachin/Documents/react/react-nextjs-ssr/pages/property.js');
+    reactHotLoader.register(mapStateToProps, 'mapStateToProps', '/home/sachin/Documents/react/react-nextjs-ssr/pages/property.js');
+    reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/pages/property.js');
+    leaveModule(module);
+})();
+
+;
+    (function (Component, route) {
+      if(!Component) return
+      if (false) return
+      module.hot.accept()
+      Component.__route = route
+
+      if (module.hot.status() === 'idle') return
+
+      var components = next.router.components
+      for (var r in components) {
+        if (!components.hasOwnProperty(r)) continue
+
+        if (components[r].Component.__route === route) {
+          next.router.update(r, Component)
+        }
+      }
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/property")
+  
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
 /***/ "./reducers/entities.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -50560,6 +50992,7 @@ function entities() {
   var action = arguments[1];
   var payload = action.payload;
 
+  console.log("payload==>>>", payload);
   if (payload !== undefined && payload.entities !== undefined) {
     return __WEBPACK_IMPORTED_MODULE_0_lodash_merge___default()({}, state, payload.entities);
   }
@@ -50577,7 +51010,7 @@ function entities() {
     return;
   }
 
-  reactHotLoader.register(entities, 'entities', '/home/sachin/Documents/react/react-nextjs-ssr/reducers/entities.js');
+  reactHotLoader.register(entities, "entities", "/home/sachin/Documents/react/react-nextjs-ssr/reducers/entities.js");
   leaveModule(module);
 })();
 
@@ -50595,6 +51028,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__repo__ = __webpack_require__("./reducers/repo.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__movies__ = __webpack_require__("./reducers/movies.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__entities__ = __webpack_require__("./reducers/entities.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__properties__ = __webpack_require__("./reducers/properties.js");
 (function () {
   var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
 
@@ -50606,10 +51040,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
 var _default = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["c" /* combineReducers */])({
   repo: __WEBPACK_IMPORTED_MODULE_1__repo__["a" /* default */],
   movies: __WEBPACK_IMPORTED_MODULE_2__movies__["a" /* default */],
-  entities: __WEBPACK_IMPORTED_MODULE_3__entities__["a" /* default */]
+  entities: __WEBPACK_IMPORTED_MODULE_3__entities__["a" /* default */],
+  properties: __WEBPACK_IMPORTED_MODULE_4__properties__["a" /* default */]
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (_default);
@@ -50682,6 +51118,66 @@ function movies() {
 
   reactHotLoader.register(movies, 'movies', '/home/sachin/Documents/react/react-nextjs-ssr/reducers/movies.js');
   leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
+/***/ "./reducers/properties.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony export (immutable) */ __webpack_exports__["a"] = properties;
+(function () {
+    var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
+
+    enterModule && enterModule(module);
+})();
+
+function properties() {
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { list: [], isFetching: false, error: '' };
+    var action = arguments[1];
+
+    console.log("reducer action==>>>", action);
+    var type = action.type,
+        payload = action.payload;
+
+    switch (type) {
+        case 'GET_PROPERTY_PENDING':
+            return Object.assign({}, state, {
+                isFetching: true
+            });
+
+        case 'GET_PROPERTY_FULFILLED':
+            console.log("reducer payload ==>>>", payload);
+            return Object.assign({}, state, {
+                isFetching: false,
+                list: payload
+            });
+        case 'GET_MOVIES_REJECTED':
+            return Object.assign({}, state, {
+                isFetching: false,
+                error: 'An Error Ocurred'
+            });
+        default:
+            return state;
+    }
+}
+;
+
+(function () {
+    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
+
+    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
+
+    if (!reactHotLoader) {
+        return;
+    }
+
+    reactHotLoader.register(properties, 'properties', '/home/sachin/Documents/react/react-nextjs-ssr/reducers/properties.js');
+    leaveModule(module);
 })();
 
 ;
@@ -50800,7 +51296,7 @@ function clientSagas() {
       switch (_context2.prev = _context2.next) {
         case 0:
           _context2.next = 2;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* all */])([Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_2__repoSagas__["a" /* default */]), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_3__movieSagas__["c" /* watchFetchMovies */]), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_3__movieSagas__["b" /* watchFetchMovie */]), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_4__propertySagas__["fetchProperty"])]);
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* all */])([Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_2__repoSagas__["a" /* default */]), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_3__movieSagas__["c" /* watchFetchMovies */]), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_3__movieSagas__["b" /* watchFetchMovie */]), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_4__propertySagas__["a" /* fetchPropertyData */])]);
 
         case 2:
         case 'end':
@@ -50900,7 +51396,7 @@ function fetchmovies() {
           _context.next = 5;
           return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* call */])(__WEBPACK_IMPORTED_MODULE_2__libs_http__["a" /* get */], baseUrl + 'discover/movie?api_key=' + apiKey, {
             transformResponse: [function (data) {
-              return Object(__WEBPACK_IMPORTED_MODULE_3__libs_normalize__["c" /* normalize */])(Object(__WEBPACK_IMPORTED_MODULE_4__libs_parseResponse__["a" /* default */])(data).results, __WEBPACK_IMPORTED_MODULE_3__libs_normalize__["a" /* moviesArraySchema */]);
+              return Object(__WEBPACK_IMPORTED_MODULE_3__libs_normalize__["b" /* normalize */])(Object(__WEBPACK_IMPORTED_MODULE_4__libs_parseResponse__["a" /* default */])(data).results, __WEBPACK_IMPORTED_MODULE_3__libs_normalize__["a" /* moviesArraySchema */]);
             }]
           });
 
@@ -50942,33 +51438,36 @@ function fetchMovie(action) {
           _context2.next = 6;
           return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* call */])(__WEBPACK_IMPORTED_MODULE_2__libs_http__["a" /* get */], 'https://devapi.biproxi.com/v1/listing?listing_id=' + id, {
             transformResponse: [function (data) {
-              return Object(__WEBPACK_IMPORTED_MODULE_3__libs_normalize__["c" /* normalize */])(Object(__WEBPACK_IMPORTED_MODULE_4__libs_parseResponse__["a" /* default */])(data), __WEBPACK_IMPORTED_MODULE_3__libs_normalize__["b" /* moviesSchema */]);
+              return data;
             }]
           });
 
         case 6:
           response = _context2.sent;
-          _context2.next = 9;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIE_FULFILLED', payload: response.data });
 
-        case 9:
-          _context2.next = 16;
+
+          console.log("response==>>>", response);
+          _context2.next = 10;
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIE_FULFILLED', payload: response.data.data });
+
+        case 10:
+          _context2.next = 17;
           break;
 
-        case 11:
-          _context2.prev = 11;
+        case 12:
+          _context2.prev = 12;
           _context2.t0 = _context2['catch'](1);
 
           console.warn(_context2.t0);
-          _context2.next = 16;
+          _context2.next = 17;
           return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIE_REJECTED' });
 
-        case 16:
+        case 17:
         case 'end':
           return _context2.stop();
       }
     }
-  }, _marked2, this, [[1, 11]]);
+  }, _marked2, this, [[1, 12]]);
 }
 
 function watchFetchMovie() {
@@ -51071,10 +51570,7 @@ function fetchMovieServer() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* unused harmony export watchFetchMovie */
-/* unused harmony export fetchPropertyData */
-/* unused harmony export watchFetchMovies */
-/* unused harmony export fetchMovieServer */
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony export (immutable) */ __webpack_exports__["a"] = fetchPropertyData;
 /* harmony export (immutable) */ __webpack_exports__["b"] = fetchPropertyServer;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__("./node_modules/babel-runtime/regenerator/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
@@ -51090,278 +51586,115 @@ function fetchMovieServer() {
     enterModule && enterModule(module);
 })();
 
-var _marked = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(fetchmovies),
-    _marked2 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(fetchMovie),
-    _marked3 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(fetchProperty),
-    _marked4 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(watchFetchMovie),
-    _marked5 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(fetchPropertyData),
-    _marked6 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(watchFetchMovies),
-    _marked7 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(fetchMovieServer),
-    _marked8 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(fetchPropertyServer);
+var _marked = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(fetchProperty),
+    _marked2 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(fetchPropertyData),
+    _marked3 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(fetchPropertyServer);
 
 
 
 
 
 
-var baseUrl = 'https://api.themoviedb.org/3/';
-var apiKey = '475d960c7374b0d07a51bf9f1e9cfd03';
-
-function getMoviesPendingAction() {
-    return { type: 'GET_MOVIES_PENDING' };
-}
-
-function fetchmovies() {
-    var response;
-    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchmovies$(_context) {
+function fetchProperty(action) {
+    var id, response;
+    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchProperty$(_context) {
         while (1) {
             switch (_context.prev = _context.next) {
                 case 0:
-                    _context.prev = 0;
-                    _context.next = 3;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])(getMoviesPendingAction());
-
-                case 3:
+                    console.log("action==>>>", action);
+                    id = action.query.id;
+                    _context.prev = 2;
                     _context.next = 5;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* call */])(__WEBPACK_IMPORTED_MODULE_2__libs_http__["a" /* get */], baseUrl + 'discover/movie?api_key=' + apiKey, {
+                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_PROPERTY_PENDING' });
+
+                case 5:
+                    _context.next = 7;
+                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* call */])(__WEBPACK_IMPORTED_MODULE_2__libs_http__["a" /* get */], 'https://devapi.biproxi.com/v1/listing?listing_id=' + id, {
                         transformResponse: [function (data) {
-                            return Object(__WEBPACK_IMPORTED_MODULE_3__libs_normalize__["c" /* normalize */])(Object(__WEBPACK_IMPORTED_MODULE_4__libs_parseResponse__["a" /* default */])(data).results, __WEBPACK_IMPORTED_MODULE_3__libs_normalize__["a" /* moviesArraySchema */]);
+                            return data;
                         }]
                     });
 
-                case 5:
+                case 7:
                     response = _context.sent;
-                    _context.next = 8;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIES_FULFILLED', payload: response.data });
 
-                case 8:
-                    _context.next = 14;
+
+                    console.log("response==>>>", response);
+                    _context.next = 11;
+                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_PROPERTY_FULFILLED', payload: response.data.data });
+
+                case 11:
+                    _context.next = 18;
                     break;
 
-                case 10:
-                    _context.prev = 10;
-                    _context.t0 = _context['catch'](0);
-                    _context.next = 14;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIES_REJECTED' });
+                case 13:
+                    _context.prev = 13;
+                    _context.t0 = _context['catch'](2);
 
-                case 14:
+                    console.warn("error==>>>", _context.t0);
+                    _context.next = 18;
+                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_PROPERTY_REJECTED' });
+
+                case 18:
                 case 'end':
                     return _context.stop();
             }
         }
-    }, _marked, this, [[0, 10]]);
-}
-
-function fetchMovie(action) {
-    var id, response;
-    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchMovie$(_context2) {
-        while (1) {
-            switch (_context2.prev = _context2.next) {
-                case 0:
-                    id = action.query.id;
-                    _context2.prev = 1;
-                    _context2.next = 4;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIE_PENDING' });
-
-                case 4:
-                    _context2.next = 6;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* call */])(__WEBPACK_IMPORTED_MODULE_2__libs_http__["a" /* get */], baseUrl + 'movie/' + id + '?api_key=' + apiKey, {
-                        transformResponse: [function (data) {
-                            return Object(__WEBPACK_IMPORTED_MODULE_3__libs_normalize__["c" /* normalize */])(Object(__WEBPACK_IMPORTED_MODULE_4__libs_parseResponse__["a" /* default */])(data), __WEBPACK_IMPORTED_MODULE_3__libs_normalize__["b" /* moviesSchema */]);
-                        }]
-                    });
-
-                case 6:
-                    response = _context2.sent;
-                    _context2.next = 9;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIE_FULFILLED', payload: response.data });
-
-                case 9:
-                    _context2.next = 16;
-                    break;
-
-                case 11:
-                    _context2.prev = 11;
-                    _context2.t0 = _context2['catch'](1);
-
-                    console.warn(_context2.t0);
-                    _context2.next = 16;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIE_REJECTED' });
-
-                case 16:
-                case 'end':
-                    return _context2.stop();
-            }
-        }
-    }, _marked2, this, [[1, 11]]);
-}
-
-function fetchProperty(action) {
-    var id, response;
-    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchProperty$(_context3) {
-        while (1) {
-            switch (_context3.prev = _context3.next) {
-                case 0:
-                    id = action.query.id;
-                    _context3.prev = 1;
-                    _context3.next = 4;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIE_PENDING' });
-
-                case 4:
-                    _context3.next = 6;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* call */])(__WEBPACK_IMPORTED_MODULE_2__libs_http__["a" /* get */], baseUrl + 'movie/' + id + '?api_key=' + apiKey, {
-                        transformResponse: [function (data) {
-                            return Object(__WEBPACK_IMPORTED_MODULE_3__libs_normalize__["c" /* normalize */])(Object(__WEBPACK_IMPORTED_MODULE_4__libs_parseResponse__["a" /* default */])(data), __WEBPACK_IMPORTED_MODULE_3__libs_normalize__["b" /* moviesSchema */]);
-                        }]
-                    });
-
-                case 6:
-                    response = _context3.sent;
-                    _context3.next = 9;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIE_FULFILLED', payload: response.data });
-
-                case 9:
-                    _context3.next = 16;
-                    break;
-
-                case 11:
-                    _context3.prev = 11;
-                    _context3.t0 = _context3['catch'](1);
-
-                    console.warn(_context3.t0);
-                    _context3.next = 16;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIE_REJECTED' });
-
-                case 16:
-                case 'end':
-                    return _context3.stop();
-            }
-        }
-    }, _marked3, this, [[1, 11]]);
-}
-
-function watchFetchMovie() {
-    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function watchFetchMovie$(_context4) {
-        while (1) {
-            switch (_context4.prev = _context4.next) {
-                case 0:
-                    _context4.next = 2;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["g" /* takeEvery */])('GET_MOVIE', fetchMovie);
-
-                case 2:
-                case 'end':
-                    return _context4.stop();
-            }
-        }
-    }, _marked4, this);
+    }, _marked, this, [[2, 13]]);
 }
 
 function fetchPropertyData() {
-    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchPropertyData$(_context5) {
+    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchPropertyData$(_context2) {
         while (1) {
-            switch (_context5.prev = _context5.next) {
+            switch (_context2.prev = _context2.next) {
                 case 0:
-                    _context5.next = 2;
+                    _context2.next = 2;
                     return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["g" /* takeEvery */])('GET_PROPERTY', fetchProperty);
 
                 case 2:
                 case 'end':
-                    return _context5.stop();
+                    return _context2.stop();
             }
         }
-    }, _marked5, this);
-}
-
-function watchFetchMovies() {
-    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function watchFetchMovies$(_context6) {
-        while (1) {
-            switch (_context6.prev = _context6.next) {
-                case 0:
-                    _context6.next = 2;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["g" /* takeEvery */])('GET_MOVIES', fetchmovies);
-
-                case 2:
-                case 'end':
-                    return _context6.stop();
-            }
-        }
-    }, _marked6, this);
-}
-
-function fetchMovieServer() {
-    var action;
-    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchMovieServer$(_context7) {
-        while (1) {
-            switch (_context7.prev = _context7.next) {
-                case 0:
-                    _context7.next = 2;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["f" /* take */])('GET_MOVIE_SERVER');
-
-                case 2:
-                    action = _context7.sent;
-
-                case 3:
-                    if (!(action !== __WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["END"])) {
-                        _context7.next = 11;
-                        break;
-                    }
-
-                    _context7.next = 6;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(fetchMovie, action);
-
-                case 6:
-                    _context7.next = 8;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["f" /* take */])('GET_MOVIE_SERVER');
-
-                case 8:
-                    action = _context7.sent;
-                    _context7.next = 3;
-                    break;
-
-                case 11:
-                case 'end':
-                    return _context7.stop();
-            }
-        }
-    }, _marked7, this);
+    }, _marked2, this);
 }
 
 function fetchPropertyServer() {
     var action;
-    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchPropertyServer$(_context8) {
+    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchPropertyServer$(_context3) {
         while (1) {
-            switch (_context8.prev = _context8.next) {
+            switch (_context3.prev = _context3.next) {
                 case 0:
-                    _context8.next = 2;
+                    _context3.next = 2;
                     return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["f" /* take */])('GET_PROPERTY_SERVER');
 
                 case 2:
-                    action = _context8.sent;
+                    action = _context3.sent;
 
                 case 3:
                     if (!(action !== __WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["END"])) {
-                        _context8.next = 11;
+                        _context3.next = 11;
                         break;
                     }
 
-                    _context8.next = 6;
+                    _context3.next = 6;
                     return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(fetchPropertyData, action);
 
                 case 6:
-                    _context8.next = 8;
+                    _context3.next = 8;
                     return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["f" /* take */])('GET_PROPERTY_SERVER');
 
                 case 8:
-                    action = _context8.sent;
-                    _context8.next = 3;
+                    action = _context3.sent;
+                    _context3.next = 3;
                     break;
 
                 case 11:
                 case 'end':
-                    return _context8.stop();
+                    return _context3.stop();
             }
         }
-    }, _marked8, this);
+    }, _marked3, this);
 }
 ;
 
@@ -51374,16 +51707,8 @@ function fetchPropertyServer() {
         return;
     }
 
-    reactHotLoader.register(baseUrl, 'baseUrl', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
-    reactHotLoader.register(apiKey, 'apiKey', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
-    reactHotLoader.register(getMoviesPendingAction, 'getMoviesPendingAction', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
-    reactHotLoader.register(fetchmovies, 'fetchmovies', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
-    reactHotLoader.register(fetchMovie, 'fetchMovie', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
     reactHotLoader.register(fetchProperty, 'fetchProperty', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
-    reactHotLoader.register(watchFetchMovie, 'watchFetchMovie', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
     reactHotLoader.register(fetchPropertyData, 'fetchPropertyData', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
-    reactHotLoader.register(watchFetchMovies, 'watchFetchMovies', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
-    reactHotLoader.register(fetchMovieServer, 'fetchMovieServer', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
     reactHotLoader.register(fetchPropertyServer, 'fetchPropertyServer', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
     leaveModule(module);
 })();
@@ -51432,7 +51757,7 @@ function fetchRepo() {
           _context.next = 5;
           return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* call */])(__WEBPACK_IMPORTED_MODULE_2__libs_http__["a" /* get */], 'https://api.github.com/repos/batusai513/possessive', {
             transformResponse: [function (data) {
-              return Object(__WEBPACK_IMPORTED_MODULE_3__libs_normalize__["c" /* normalize */])(data, __WEBPACK_IMPORTED_MODULE_3__libs_normalize__["d" /* reposSchema */]);
+              return Object(__WEBPACK_IMPORTED_MODULE_3__libs_normalize__["b" /* normalize */])(data, __WEBPACK_IMPORTED_MODULE_3__libs_normalize__["c" /* reposSchema */]);
             }]
           });
 
@@ -51509,7 +51834,8 @@ var routes = __webpack_require__("./node_modules/next-routes/dist/index.js")();
 module.exports = routes;
 
 routes.add('movie', '/movies/:id', 'movie');
-routes.add('properties', '/property/:id', 'properties');
+routes.add('properties', 'properties');
+routes.add('property', '/property/:id', 'property');
 ;
 
 (function () {
@@ -51891,18 +52217,18 @@ module.exports = __webpack_require__("./node_modules/next/dist/pages/_error.js")
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./pages/movies.js");
+module.exports = __webpack_require__("./pages/properties.js");
 
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./pages/properties.js");
+module.exports = __webpack_require__("./pages/property.js");
 
 
 /***/ })

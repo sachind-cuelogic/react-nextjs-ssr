@@ -26,10 +26,20 @@ function* fetchMovie(action) {
   const id = action.query.id;
   try {
     yield put({ type: 'GET_MOVIE_PENDING' });
+    // const response = yield call(get, `${baseUrl}movie/${id}?api_key=${apiKey}`, {
+    //   transformResponse: [data => normalize(parseResponse(data), moviesSchema)],
+    // });
+    // yield put({ type: 'GET_MOVIE_FULFILLED', payload: response.data });
+
     const response = yield call(get, `https://devapi.biproxi.com/v1/listing?listing_id=${id}`, {
-      transformResponse: [data => normalize(parseResponse(data), moviesSchema)],
+      transformResponse: [data => data],
     });
-    yield put({ type: 'GET_MOVIE_FULFILLED', payload: response.data });
+
+    console.log("response==>>>", response)
+    yield put({ type: 'GET_MOVIE_FULFILLED', payload: response.data.data });
+
+
+
   } catch (error) {
     console.warn(error);
     yield put({ type: 'GET_MOVIE_REJECTED' });

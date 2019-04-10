@@ -17,10 +17,14 @@ function Properties(props) {
 
 function mapStateToProps(state) {
     return {
-        movies: state.movies.list.map(id => state.entities.movies[id]) || [],
-        isFetching: state.movies.isFetching,
+
+        // movies: state.properties.list.map(id => state.entities.properties[id]) || [],
+        //isFetching: state.properties.isFetching,
+
+        movies: state.properties.list || [],
+        isFetching: state.properties.isFetching,
     };
 }
 
 
-export default withReduxSaga(configureStore, mapStateToProps)(Properties, { type: 'GET_MOVIES' });
+export default withReduxSaga(configureStore, mapStateToProps)(Properties, { type: 'GET_PROPERTY' });

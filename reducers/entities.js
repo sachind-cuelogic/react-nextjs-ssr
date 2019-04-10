@@ -9,6 +9,7 @@ export default function entities(
   action,
 ) {
   var { payload } = action;
+  console.log("payload==>>>", payload)
   if (payload !== undefined && payload.entities !== undefined) {
     return merge({}, state, payload.entities);
   }
