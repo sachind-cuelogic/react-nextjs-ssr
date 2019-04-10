@@ -26,7 +26,7 @@ function* fetchMovie(action) {
   const id = action.query.id;
   try {
     yield put({ type: 'GET_MOVIE_PENDING' });
-    const response = yield call(get, `${baseUrl}movie/${id}?api_key=${apiKey}`, {
+    const response = yield call(get, `https://devapi.biproxi.com/v1/listing?listing_id=${id}`, {
       transformResponse: [data => normalize(parseResponse(data), moviesSchema)],
     });
     yield put({ type: 'GET_MOVIE_FULFILLED', payload: response.data });

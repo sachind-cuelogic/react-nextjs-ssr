@@ -17,3 +17,5 @@ config/config.json
 #SEO
 sitemap.xml 
 sitemap/*.*
+
+.next
