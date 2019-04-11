@@ -8,7 +8,7 @@ export default function Header() {
         <a>Index</a>
       </Link>
       <Link prefetch href="/movies">
-        <a>Movies</a>
+        <a>Properties</a>
       </Link>
     </header>
   );

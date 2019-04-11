@@ -28,7 +28,7 @@ function* fetchMovie(action) {
   try {
     yield put({ type: 'GET_MOVIE_PENDING' });
     const response = yield call(get, `https://devapi.biproxi.com/v1/listing?listing_id=${id}`, {
-      transformResponse: [data => normalize(parseResponse(data).data, moviesSchema)],
+      transformResponse: [data => normalize(parseResponse(data).data[0], moviesSchema)],
     });
     console.log("single movie response ==>>>", response)
     yield put({ type: 'GET_MOVIE_FULFILLED', payload: response.data });

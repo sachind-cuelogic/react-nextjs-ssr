@@ -9,7 +9,7 @@ function Movie(props) {
   return (
     <MainLayout>
       <h1>
-        Movie
+        Property
       </h1>
       <MovieDetail {...props} />
     </MainLayout>
