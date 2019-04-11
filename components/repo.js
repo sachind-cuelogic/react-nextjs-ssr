@@ -21,9 +21,9 @@ class Repo extends Component {
           <p className="description">
             To get started, edit <code>pages/index.js</code> and save to reload.
           </p>
-          {/* <pre>
+          <pre>
             {JSON.stringify(repo, null, 2)}
-          </pre> */}
+          </pre>
         </div>
 
         <style jsx>{`

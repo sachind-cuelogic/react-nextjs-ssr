@@ -6,6 +6,7 @@ import MovieList from '../components/movieList';
 import configureStore from '../store';
 
 function Movies(props) {
+  console.log("Movies props ==>>>", props)
   return (
     <MainLayout>
       <Head title="Movies" />

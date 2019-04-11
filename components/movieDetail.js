@@ -17,9 +17,11 @@ function MovieDetail({ movie }) {
 MovieDetail.propTypes = {
   movie: PropTypes.shape({
     title: PropTypes.string,
-    imdb_id: PropTypes.string,
-    homepage: PropTypes.string,
-    overview: PropTypes.string,
+    price: PropTypes.string,
+    listing_group: PropTypes.string,
+    square_feet: PropTypes.string,
+    cap_rate: PropTypes.string,
+    description: PropTypes.string,
   }),
 };
 

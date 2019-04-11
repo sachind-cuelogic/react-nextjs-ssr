@@ -6,7 +6,6 @@ import MovieDetail from '../components/movieDetail';
 import configureStore from '../store';
 
 function Movie(props) {
-  console.log("moviewww==>>>", props)
   return (
     <MainLayout>
       <h1>
@@ -24,7 +23,6 @@ Movie.propTypes = {
 function mapStateToProps(state, ownProps) {
   const { url } = ownProps;
   const id = url.query.id;
-  console.log("movie state.entities==>>>", state.entities)
   const movie = state.entities.movies[id] || {};
   return {
     movie,

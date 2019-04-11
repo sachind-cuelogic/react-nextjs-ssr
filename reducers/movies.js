@@ -6,6 +6,7 @@ export default function movies(state = { list: [], isFetching: false, error: '' 
         isFetching: true,
       });
     case 'GET_MOVIES_FULFILLED':
+    console.log("movies reduer payload===>>",payload)
       return Object.assign({}, state, {
         isFetching: false,
         list: payload.result,

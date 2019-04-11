@@ -9,7 +9,7 @@ export default function entities(
   action,
 ) {
   var { payload } = action;
-  console.log("payload==>>>", payload)
+  console.log("entities reducer ==>>>", payload)
   if (payload !== undefined && payload.entities !== undefined) {
     return merge({}, state, payload.entities);
   }

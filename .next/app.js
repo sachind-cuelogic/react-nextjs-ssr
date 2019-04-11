@@ -90,7 +90,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "50e9ae77c80b85f781b3"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f2f79c1d5bdb756ec38b"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -755,7 +755,7 @@
 /******/ 		if (__webpack_require__.nc) {
 /******/ 			script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 		}
-/******/ 		script.src = __webpack_require__.p + "" + ({"0":"commons","1":"main.js","2":"bundles/pages/_error.js","4":"bundles/pages/properties.js","5":"bundles/pages/property.js"}[chunkId]||chunkId) + "-" + {"0":"6b743919797d9ad9d216","1":"309311f1fd266f3f58b2","2":"4d097e5dbe4836f75cef","4":"6ed432db133df840af1c","5":"f12853f5de23fa4b0089"}[chunkId] + ".js";
+/******/ 		script.src = __webpack_require__.p + "" + ({"0":"commons","1":"main.js","2":"bundles/pages/_error.js","4":"bundles/pages/index.js","5":"bundles/pages/movies.js","6":"bundles/pages/movie.js"}[chunkId]||chunkId) + "-" + {"0":"6cb1740cd2180cdec20f","1":"309311f1fd266f3f58b2","2":"4d097e5dbe4836f75cef","4":"81ff11924f159dbd7ecd","5":"04ecf685f0e13b83e032","6":"34fd38b47bf8fde612e5"}[chunkId] + ".js";
 /******/ 		var timeout = setTimeout(onScriptComplete, 120000);
 /******/ 		script.onerror = script.onload = onScriptComplete;
 /******/ 		function onScriptComplete() {
@@ -1007,93 +1007,39 @@ function Header() {
       }
     },
     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      'ul',
-      {
-        __source: {
+      __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
+      { prefetch: true, href: '/', __source: {
           fileName: _jsxFileName,
           lineNumber: 7
         }
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'li',
+        'a',
         {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 8
           }
         },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
-          { prefetch: true, href: '/', __source: {
-              fileName: _jsxFileName,
-              lineNumber: 8
-            }
-          },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'a',
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 9
-              }
-            },
-            'Index'
-          )
-        )
-      ),
+        'Index'
+      )
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
+      { prefetch: true, href: '/movies', __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        }
+      },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'li',
+        'a',
         {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 11
           }
         },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
-          { prefetch: true, href: '/movies', __source: {
-              fileName: _jsxFileName,
-              lineNumber: 11
-            }
-          },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'a',
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 12
-              }
-            },
-            'Movies'
-          )
-        )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'li',
-        {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 14
-          }
-        },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_1_next_link___default.a,
-          { prefetch: true, href: '/properties', __source: {
-              fileName: _jsxFileName,
-              lineNumber: 14
-            }
-          },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'a',
-            {
-              __source: {
-                fileName: _jsxFileName,
-                lineNumber: 15
-              }
-            },
-            'Properties'
-          )
-        )
+        'Movies'
       )
     )
   );
@@ -1184,7 +1130,7 @@ MainLayout.propTypes = {
 
 /***/ }),
 
-/***/ "./components/propertyDetail.js":
+/***/ "./components/movieDetail.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1192,127 +1138,110 @@ MainLayout.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("./node_modules/next/node_modules/prop-types/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/components/propertyDetail.js';
+var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/components/movieDetail.js';
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
 
-    enterModule && enterModule(module);
+  enterModule && enterModule(module);
 })();
 
 
 
 
-function propertyDetail(_ref) {
-    var properties = _ref.properties;
+function MovieDetail(_ref) {
+  var movie = _ref.movie;
 
-    console.log("propertyDetail  ==>>", properties);
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        {
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 8
-            }
+  var imdb = 'http://www.imdb.com/title/' + movie.imdb_id + '/';
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      }
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'h2',
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8
+        }
+      },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'a',
+        { href: movie.homepage, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 9
+          }
         },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h1',
-            {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 9
-                }
-            },
-            'Propety Detail'
-        )
+        movie.title
+      )
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'p',
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        }
+      },
+      movie.overview
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'p',
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12
+        }
+      },
+      'imdb: ',
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'a',
+        { href: imdb, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 12
+          }
+        },
+        imdb
+      )
     )
-
-    // <div role="tabpanel" class="tab-pane active" id="propertyDetails">
-    //     <div class="title text-left">
-    //         <h3>{this.props.country.propertyData[0].title}</h3>
-    //     </div>
-    //     <table class="table table-border-none">
-    //         <tbody>
-    //             <tr>
-    //                 <td>Listing Price</td>
-    //                 <td class="font-lg">
-    //                     <span>{this.props.country.propertyData[0].price}</span>
-    //                 </td>
-    //             </tr>
-    //         </tbody>
-    //     </table>
-    //     <div class="title-border">
-    //         <h4>PROPERTY INFORMATION</h4>
-    //     </div>
-    //     <table class="table table-border-none">
-    //         <tbody>
-    //             <tr>
-    //                 <td>Property Type</td>
-    //                 <td>{this.props.country.propertyData[0].listing_group}</td>
-    //             </tr>
-    //         </tbody>
-    //     </table>
-    //     <div class="title-border">
-    //         <h4>DETAILS</h4>
-    //     </div>
-    //     <table class="table table-border-none">
-    //         <tbody>
-    //             <tr>
-    //                 <td>Building Square Feet</td>
-    //                 <td>
-    //                     <span>{this.props.country.propertyData[0].square_feet}</span>
-    //                 </td>
-    //             </tr>
-    //             <tr>
-    //                 <td>Cap Rate</td>
-    //                 <td>
-    //                     <span>{this.props.country.propertyData[0].cap_rate}</span>
-    //                 </td>
-    //             </tr>
-    //         </tbody>
-    //     </table>
-    //     <div>
-    //         <div class="title-border">
-    //             <h4>DESCRIPTION</h4>
-    //         </div>
-    //         <div class="mr-bottom-20">
-    //             <p>
-    //                 {this.props.country.propertyData[0].description}
-    //             </p>
-    //         </div>
-    //     </div>
-    // </div>
-    ;
+  );
 }
 
-propertyDetail.propTypes = {
-    properties: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired
+MovieDetail.propTypes = {
+  movie: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.shape({
+    title: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+    price: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+    listing_group: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+    square_feet: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+    cap_rate: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+    description: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string
+  })
 };
 
-// MovieList.propTypes = {
-//     movies: PropTypes.array.isRequired,
-//   };
-
-propertyDetail.defaultProps = {
-    properties: {}
+MovieDetail.defaultProps = {
+  movie: {}
 };
 
-var _default = propertyDetail;
-/* unused harmony default export */ var _unused_webpack_default_export = (_default);
+var _default = MovieDetail;
+/* harmony default export */ __webpack_exports__["a"] = (_default);
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
 
-    if (!reactHotLoader) {
-        return;
-    }
+  if (!reactHotLoader) {
+    return;
+  }
 
-    reactHotLoader.register(propertyDetail, 'propertyDetail', '/home/sachin/Documents/react/react-nextjs-ssr/components/propertyDetail.js');
-    reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/components/propertyDetail.js');
-    leaveModule(module);
+  reactHotLoader.register(MovieDetail, 'MovieDetail', '/home/sachin/Documents/react/react-nextjs-ssr/components/movieDetail.js');
+  reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/components/movieDetail.js');
+  leaveModule(module);
 })();
 
 ;
@@ -1320,7 +1249,7 @@ var _default = propertyDetail;
 
 /***/ }),
 
-/***/ "./components/propertyList.js":
+/***/ "./components/movieList.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1330,219 +1259,253 @@ var _default = propertyDetail;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__server_routes__ = __webpack_require__("./server/routes.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__server_routes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__server_routes__);
-var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/components/propertyList.js';
+var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/components/movieList.js';
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
 
-    enterModule && enterModule(module);
+  enterModule && enterModule(module);
 })();
 
 
 
 
 
-function propertyList(_ref) {
-    var movies = _ref.movies;
+function MovieList(_ref) {
+  var movies = _ref.movies;
 
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        {
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 7
-            }
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      }
+    },
+    movies.map(function (movie) {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'h1',
+        { key: movie.id, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 9
+          }
         },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'ol',
+          __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
+          { route: '/movies/' + movie.id, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 10
+            }
+          },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'a',
             {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 8
-                }
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 11
+              }
             },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'li',
-                {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 9
-                    }
-                },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
-                    { route: "/property/" + 9635, __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 9
-                        }
-                    },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 9
-                            }
-                        },
-                        'Crossing Plaza'
-                    )
-                )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'li',
-                {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 10
-                    }
-                },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
-                    { route: "/property/12681", __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 10
-                        }
-                    },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 10
-                            }
-                        },
-                        'Walgreens'
-                    )
-                )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'li',
-                {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 11
-                    }
-                },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
-                    { route: "/property/12764", __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 11
-                        }
-                    },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 11
-                            }
-                        },
-                        '7-Eleven'
-                    )
-                )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'li',
-                {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 12
-                    }
-                },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
-                    { route: "/property/11169", __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 12
-                        }
-                    },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 12
-                            }
-                        },
-                        'United Bank & Walnut Street Finance'
-                    )
-                )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'li',
-                {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 13
-                    }
-                },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
-                    { route: "/property/12713", __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 13
-                        }
-                    },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 13
-                            }
-                        },
-                        'BMO Harris Bank'
-                    )
-                )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'li',
-                {
-                    __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 14
-                    }
-                },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2__server_routes__["Link"],
-                    { route: "/property/6988", __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 14
-                        }
-                    },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'a',
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 14
-                            }
-                        },
-                        '10,286 SF Free Standing Office Bldg For Sale'
-                    )
-                )
-            )
+            movie.title
+          )
         )
-    );
+      );
+    })
+  );
 }
 
-var _default = propertyList;
+MovieList.propTypes = {
+  movies: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired
+};
+
+var _default = MovieList;
 /* harmony default export */ __webpack_exports__["a"] = (_default);
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
 
-    if (!reactHotLoader) {
-        return;
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(MovieList, 'MovieList', '/home/sachin/Documents/react/react-nextjs-ssr/components/movieList.js');
+  reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/components/movieList.js');
+  leaveModule(module);
+})();
+
+;
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
+/***/ "./components/repo.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_jsx_style__ = __webpack_require__("./node_modules/styled-jsx/style.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__("./node_modules/next/node_modules/prop-types/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_head__ = __webpack_require__("./components/head.js");
+var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/components/repo.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+
+
+(function () {
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+
+var Repo = function (_Component) {
+  _inherits(Repo, _Component);
+
+  function Repo() {
+    _classCallCheck(this, Repo);
+
+    return _possibleConstructorReturn(this, (Repo.__proto__ || Object.getPrototypeOf(Repo)).apply(this, arguments));
+  }
+
+  _createClass(Repo, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var _props = this.props,
+          repo = _props.repo,
+          getRepo = _props.getRepo;
+
+      if (repo.id === undefined) {
+        getRepo();
+      }
     }
+  }, {
+    key: 'render',
+    value: function render() {
+      var repo = this.props.repo;
 
-    reactHotLoader.register(propertyList, 'propertyList', '/home/sachin/Documents/react/react-nextjs-ssr/components/propertyList.js');
-    reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/components/propertyList.js');
-    leaveModule(module);
+      return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+        'div',
+        {
+          className: 'jsx-464670976',
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 15
+          }
+        },
+        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_head__["a" /* default */], { title: 'Home', __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16
+          }
+        }),
+        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+          'div',
+          {
+            className: 'jsx-464670976' + ' ' + 'hero',
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 17
+            }
+          },
+          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+            'h1',
+            {
+              className: 'jsx-464670976' + ' ' + 'title',
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 18
+              }
+            },
+            'Welcome to ',
+            repo.name,
+            '!'
+          ),
+          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+            'p',
+            {
+              className: 'jsx-464670976' + ' ' + 'description',
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 21
+              }
+            },
+            'To get started, edit ',
+            __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+              'code',
+              {
+                className: 'jsx-464670976',
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 22
+                }
+              },
+              'pages/index.js'
+            ),
+            ' and save to reload.'
+          ),
+          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+            'pre',
+            {
+              className: 'jsx-464670976',
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 24
+              }
+            },
+            JSON.stringify(repo, null, 2)
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_0_styled_jsx_style___default.a, {
+          styleId: '464670976',
+          css: '.hero.jsx-464670976{width:100%;color:#333;}.title.jsx-464670976{margin:0;width:100%;padding-top:80px;line-height:1.15;font-size:48px;}.title.jsx-464670976,.description.jsx-464670976{text-align:center;}.row.jsx-464670976{max-width:880px;margin:80px auto 40px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:space-around;-webkit-justify-content:space-around;-ms-flex-pack:space-around;justify-content:space-around;}.card.jsx-464670976{padding:18px 18px 24px;width:220px;text-align:left;text-decoration:none;color:#434343;border:1px solid #9b9b9b;}.card.jsx-464670976:hover{border-color:#067df7;}.card.jsx-464670976 h3.jsx-464670976{margin:0;color:#067df7;font-size:18px;}.card.jsx-464670976 p.jsx-464670976{margin:0;padding:12px 0 0;font-size:13px;color:#333;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvcmVwby5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUE0Qm9CLEFBR3dCLEFBSUYsQUFRUyxBQUdGLEFBT08sQUFRRixBQUdaLEFBS0EsU0FqQ0UsQUE2QkcsQUFLRyxFQXRDTixLQWVXLEVBSHhCLEVBUG1CLENBeUJuQixDQTdCQSxDQXFCYyxBQVlHLEdBS0EsU0FoQkMsRUFqQkMsQ0FVSixBQW1CZixHQUthLFVBaEJVLENBaUJ2QixFQWxDaUIsZUFDakIsR0FpQmdCLGNBQ1cseUJBQzNCLENBVnFCLHFFQUNVLDJIQUMvQiIsImZpbGUiOiJjb21wb25lbnRzL3JlcG8uanMiLCJzb3VyY2VSb290IjoiL2hvbWUvc2FjaGluL0RvY3VtZW50cy9yZWFjdC9yZWFjdC1uZXh0anMtc3NyIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IENvbXBvbmVudCB9IGZyb20gJ3JlYWN0JztcbmltcG9ydCBQIGZyb20gJ3Byb3AtdHlwZXMnO1xuaW1wb3J0IEhlYWQgZnJvbSAnLi4vY29tcG9uZW50cy9oZWFkJztcblxuY2xhc3MgUmVwbyBleHRlbmRzIENvbXBvbmVudCB7XG4gIGNvbXBvbmVudERpZE1vdW50KCkge1xuICAgIGNvbnN0IHsgcmVwbywgZ2V0UmVwbyB9ID0gdGhpcy5wcm9wcztcbiAgICBpZiAocmVwby5pZCA9PT0gdW5kZWZpbmVkKSB7XG4gICAgICBnZXRSZXBvKCk7XG4gICAgfVxuICB9XG4gIHJlbmRlcigpIHtcbiAgICBjb25zdCB7IHJlcG8gfSA9IHRoaXMucHJvcHM7XG4gICAgcmV0dXJuIChcbiAgICAgIDxkaXY+XG4gICAgICAgIDxIZWFkIHRpdGxlPVwiSG9tZVwiIC8+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaGVyb1wiPlxuICAgICAgICAgIDxoMSBjbGFzc05hbWU9XCJ0aXRsZVwiPlxuICAgICAgICAgICAgV2VsY29tZSB0byB7cmVwby5uYW1lfSFcbiAgICAgICAgICA8L2gxPlxuICAgICAgICAgIDxwIGNsYXNzTmFtZT1cImRlc2NyaXB0aW9uXCI+XG4gICAgICAgICAgICBUbyBnZXQgc3RhcnRlZCwgZWRpdCA8Y29kZT5wYWdlcy9pbmRleC5qczwvY29kZT4gYW5kIHNhdmUgdG8gcmVsb2FkLlxuICAgICAgICAgIDwvcD5cbiAgICAgICAgICA8cHJlPlxuICAgICAgICAgICAge0pTT04uc3RyaW5naWZ5KHJlcG8sIG51bGwsIDIpfVxuICAgICAgICAgIDwvcHJlPlxuICAgICAgICA8L2Rpdj5cblxuICAgICAgICA8c3R5bGUganN4PntgXG4gICAgICAgICAgLmhlcm8ge1xuICAgICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgICBjb2xvcjogIzMzMztcbiAgICAgICAgICB9XG4gICAgICAgICAgLnRpdGxlIHtcbiAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgICAgcGFkZGluZy10b3A6IDgwcHg7XG4gICAgICAgICAgICBsaW5lLWhlaWdodDogMS4xNTtcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogNDhweDtcbiAgICAgICAgICB9XG4gICAgICAgICAgLnRpdGxlLFxuICAgICAgICAgIC5kZXNjcmlwdGlvbiB7XG4gICAgICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgICAgfVxuICAgICAgICAgIC5yb3cge1xuICAgICAgICAgICAgbWF4LXdpZHRoOiA4ODBweDtcbiAgICAgICAgICAgIG1hcmdpbjogODBweCBhdXRvIDQwcHg7XG4gICAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgICAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgICAgICAgICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xuICAgICAgICAgIH1cbiAgICAgICAgICAuY2FyZCB7XG4gICAgICAgICAgICBwYWRkaW5nOiAxOHB4IDE4cHggMjRweDtcbiAgICAgICAgICAgIHdpZHRoOiAyMjBweDtcbiAgICAgICAgICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgICAgICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgICAgICAgICBjb2xvcjogIzQzNDM0MztcbiAgICAgICAgICAgIGJvcmRlcjogMXB4IHNvbGlkICM5YjliOWI7XG4gICAgICAgICAgfVxuICAgICAgICAgIC5jYXJkOmhvdmVyIHtcbiAgICAgICAgICAgIGJvcmRlci1jb2xvcjogIzA2N2RmNztcbiAgICAgICAgICB9XG4gICAgICAgICAgLmNhcmQgaDMge1xuICAgICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgICAgY29sb3I6ICMwNjdkZjc7XG4gICAgICAgICAgICBmb250LXNpemU6IDE4cHg7XG4gICAgICAgICAgfVxuICAgICAgICAgIC5jYXJkIHAge1xuICAgICAgICAgICAgbWFyZ2luOiAwO1xuICAgICAgICAgICAgcGFkZGluZzogMTJweCAwIDA7XG4gICAgICAgICAgICBmb250LXNpemU6IDEzcHg7XG4gICAgICAgICAgICBjb2xvcjogIzMzMztcbiAgICAgICAgICB9XG4gICAgICAgIGB9PC9zdHlsZT5cbiAgICAgIDwvZGl2PlxuICAgICk7XG4gIH1cbn1cblxuUmVwby5wcm9wVHlwZXMgPSB7XG4gIHJlcG86IFAub2JqZWN0LmlzUmVxdWlyZWQsXG4gIGdldFJlcG86IFAuZnVuYy5pc1JlcXVpcmVkLFxufTtcblxuZXhwb3J0IGRlZmF1bHQgUmVwbztcbiJdfQ== */\n/*@ sourceURL=components/repo.js */'
+        })
+      );
+    }
+  }, {
+    key: '__reactstandin__regenerateByEval',
+    value: function __reactstandin__regenerateByEval(key, code) {
+      this[key] = eval(code);
+    }
+  }]);
+
+  return Repo;
+}(__WEBPACK_IMPORTED_MODULE_1_react__["Component"]);
+
+Repo.propTypes = {
+  repo: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.object.isRequired,
+  getRepo: __WEBPACK_IMPORTED_MODULE_2_prop_types___default.a.func.isRequired
+};
+
+var _default = Repo;
+/* harmony default export */ __webpack_exports__["a"] = (_default);
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
+
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(Repo, 'Repo', '/home/sachin/Documents/react/react-nextjs-ssr/components/repo.js');
+  reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/components/repo.js');
+  leaveModule(module);
 })();
 
 ;
@@ -1657,16 +1620,12 @@ function destroy(url) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return normalize; });
-/* unused harmony export moviesSchema */
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return normalize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return moviesSchema; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return moviesArraySchema; });
-/* unused harmony export propertiesSchema */
-/* unused harmony export propertiesArraySchema */
-/* unused harmony export propertySchema */
-/* unused harmony export propertyArraySchema */
 /* unused harmony export usersSchema */
 /* unused harmony export organizationsSchema */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return reposSchema; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return reposSchema; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_normalizr__ = __webpack_require__("./node_modules/normalizr/dist/normalizr.es.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__parseResponse__ = __webpack_require__("./libs/parseResponse.js");
 (function () {
@@ -1683,13 +1642,6 @@ var normalize = function normalize(response, _schema) {
 };
 var moviesSchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].Entity('movies');
 var moviesArraySchema = [moviesSchema];
-
-var propertiesSchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].Entity('properties');
-var propertiesArraySchema = [propertySchema];
-
-var propertySchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].Entity('property');
-var propertyArraySchema = [propertySchema];
-
 var usersSchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].Entity('users');
 var organizationsSchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].Entity('organizations');
 var reposSchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].Entity('repos', {
@@ -1710,10 +1662,6 @@ var reposSchema = new __WEBPACK_IMPORTED_MODULE_0_normalizr__["b" /* schema */].
   reactHotLoader.register(normalize, 'normalize', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
   reactHotLoader.register(moviesSchema, 'moviesSchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
   reactHotLoader.register(moviesArraySchema, 'moviesArraySchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
-  reactHotLoader.register(propertiesSchema, 'propertiesSchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
-  reactHotLoader.register(propertiesArraySchema, 'propertiesArraySchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
-  reactHotLoader.register(propertySchema, 'propertySchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
-  reactHotLoader.register(propertyArraySchema, 'propertyArraySchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
   reactHotLoader.register(usersSchema, 'usersSchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
   reactHotLoader.register(organizationsSchema, 'organizationsSchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
   reactHotLoader.register(reposSchema, 'reposSchema', '/home/sachin/Documents/react/react-nextjs-ssr/libs/normalize.js');
@@ -3736,6 +3684,13 @@ module.exports = { "default": __webpack_require__("./node_modules/core-js/librar
 
 /***/ }),
 
+/***/ "./node_modules/babel-runtime/core-js/map.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__("./node_modules/core-js/library/fn/map.js"), __esModule: true };
+
+/***/ }),
+
 /***/ "./node_modules/babel-runtime/core-js/object/assign.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4931,6 +4886,21 @@ var $JSON = core.JSON || (core.JSON = { stringify: JSON.stringify });
 module.exports = function stringify(it) { // eslint-disable-line no-unused-vars
   return $JSON.stringify.apply($JSON, arguments);
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/fn/map.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__("./node_modules/core-js/library/modules/es6.object.to-string.js");
+__webpack_require__("./node_modules/core-js/library/modules/es6.string.iterator.js");
+__webpack_require__("./node_modules/core-js/library/modules/web.dom.iterable.js");
+__webpack_require__("./node_modules/core-js/library/modules/es6.map.js");
+__webpack_require__("./node_modules/core-js/library/modules/es7.map.to-json.js");
+__webpack_require__("./node_modules/core-js/library/modules/es7.map.of.js");
+__webpack_require__("./node_modules/core-js/library/modules/es7.map.from.js");
+module.exports = __webpack_require__("./node_modules/core-js/library/modules/_core.js").Map;
 
 
 /***/ }),
@@ -7136,6 +7106,33 @@ addToUnscopables('entries');
 
 /***/ }),
 
+/***/ "./node_modules/core-js/library/modules/es6.map.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var strong = __webpack_require__("./node_modules/core-js/library/modules/_collection-strong.js");
+var validate = __webpack_require__("./node_modules/core-js/library/modules/_validate-collection.js");
+var MAP = 'Map';
+
+// 23.1 Map Objects
+module.exports = __webpack_require__("./node_modules/core-js/library/modules/_collection.js")(MAP, function (get) {
+  return function Map() { return get(this, arguments.length > 0 ? arguments[0] : undefined); };
+}, {
+  // 23.1.3.6 Map.prototype.get(key)
+  get: function get(key) {
+    var entry = strong.getEntry(validate(this, MAP), key);
+    return entry && entry.v;
+  },
+  // 23.1.3.9 Map.prototype.set(key, value)
+  set: function set(key, value) {
+    return strong.def(validate(this, MAP), key === 0 ? 0 : key, value);
+  }
+}, strong, true);
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/library/modules/es6.object.assign.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7795,6 +7792,35 @@ setToStringTag($Symbol, 'Symbol');
 setToStringTag(Math, 'Math', true);
 // 24.3.3 JSON[@@toStringTag]
 setToStringTag(global.JSON, 'JSON', true);
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/modules/es7.map.from.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-map.from
+__webpack_require__("./node_modules/core-js/library/modules/_set-collection-from.js")('Map');
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/modules/es7.map.of.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://tc39.github.io/proposal-setmap-offrom/#sec-map.of
+__webpack_require__("./node_modules/core-js/library/modules/_set-collection-of.js")('Map');
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/modules/es7.map.to-json.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://github.com/DavidBruant/Map-Set.prototype.toJSON
+var $export = __webpack_require__("./node_modules/core-js/library/modules/_export.js");
+
+$export($export.P + $export.R, 'Map', { toJSON: __webpack_require__("./node_modules/core-js/library/modules/_collection-to-json.js")('Map') });
 
 
 /***/ }),
@@ -49677,6 +49703,31 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 /***/ }),
 
+/***/ "./node_modules/string-hash/index.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function hash(str) {
+  var hash = 5381,
+      i    = str.length;
+
+  while(i) {
+    hash = (hash * 33) ^ str.charCodeAt(--i);
+  }
+
+  /* JavaScript does bitwise operations (like XOR, above) on 32-bit signed
+   * integers. Since we want the results to be always positive, convert the
+   * signed int to an unsigned by doing an unsigned bitshift. */
+  return hash >>> 0;
+}
+
+module.exports = hash;
+
+
+/***/ }),
+
 /***/ "./node_modules/strip-ansi/index.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -49699,6 +49750,669 @@ module.exports = function (str) {
 module.exports = function () {
 	return /[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-PRZcf-nqry=><]/g;
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/dist/lib/stylesheet.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _classCallCheck2 = __webpack_require__("./node_modules/babel-runtime/helpers/classCallCheck.js");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__("./node_modules/babel-runtime/helpers/createClass.js");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+Based on Glamor's sheet
+https://github.com/threepointone/glamor/blob/667b480d31b3721a905021b26e1290ce92ca2879/src/sheet.js
+*/
+
+var isProd = process.env && "development" === 'production';
+var isString = function isString(o) {
+  return Object.prototype.toString.call(o) === '[object String]';
+};
+
+var StyleSheet = function () {
+  function StyleSheet() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        _ref$name = _ref.name,
+        name = _ref$name === undefined ? 'stylesheet' : _ref$name,
+        _ref$optimizeForSpeed = _ref.optimizeForSpeed,
+        optimizeForSpeed = _ref$optimizeForSpeed === undefined ? isProd : _ref$optimizeForSpeed,
+        _ref$isBrowser = _ref.isBrowser,
+        isBrowser = _ref$isBrowser === undefined ? typeof window !== 'undefined' : _ref$isBrowser;
+
+    (0, _classCallCheck3.default)(this, StyleSheet);
+
+    invariant(isString(name), '`name` must be a string');
+    this._name = name;
+    this._deletedRulePlaceholder = '#' + name + '-deleted-rule____{}';
+
+    invariant(typeof optimizeForSpeed === 'boolean', '`optimizeForSpeed` must be a boolean');
+    this._optimizeForSpeed = optimizeForSpeed;
+    this._isBrowser = isBrowser;
+
+    this._serverSheet = undefined;
+    this._tags = [];
+    this._injected = false;
+    this._rulesCount = 0;
+  }
+
+  (0, _createClass3.default)(StyleSheet, [{
+    key: 'setOptimizeForSpeed',
+    value: function setOptimizeForSpeed(bool) {
+      invariant(typeof bool === 'boolean', '`setOptimizeForSpeed` accepts a boolean');
+
+      invariant(this._rulesCount === 0, 'optimizeForSpeed cannot be when rules have already been inserted');
+      this.flush();
+      this._optimizeForSpeed = bool;
+      this.inject();
+    }
+  }, {
+    key: 'isOptimizeForSpeed',
+    value: function isOptimizeForSpeed() {
+      return this._optimizeForSpeed;
+    }
+  }, {
+    key: 'inject',
+    value: function inject() {
+      var _this = this;
+
+      invariant(!this._injected, 'sheet already injected');
+      this._injected = true;
+      if (this._isBrowser && this._optimizeForSpeed) {
+        this._tags[0] = this.makeStyleTag(this._name);
+        this._optimizeForSpeed = 'insertRule' in this.getSheet();
+        if (!this._optimizeForSpeed) {
+          if (!isProd) {
+            console.warn('StyleSheet: optimizeForSpeed mode not supported falling back to standard mode.'); // eslint-disable-line no-console
+          }
+          this.flush();
+          this._injected = true;
+        }
+        return;
+      }
+
+      this._serverSheet = {
+        cssRules: [],
+        insertRule: function insertRule(rule, index) {
+          if (typeof index === 'number') {
+            _this._serverSheet.cssRules[index] = { cssText: rule };
+          } else {
+            _this._serverSheet.cssRules.push({ cssText: rule });
+          }
+          return index;
+        },
+        deleteRule: function deleteRule(index) {
+          _this._serverSheet.cssRules[index] = null;
+        }
+      };
+    }
+  }, {
+    key: 'getSheetForTag',
+    value: function getSheetForTag(tag) {
+      if (tag.sheet) {
+        return tag.sheet;
+      }
+
+      // this weirdness brought to you by firefox
+      for (var i = 0; i < document.styleSheets.length; i++) {
+        if (document.styleSheets[i].ownerNode === tag) {
+          return document.styleSheets[i];
+        }
+      }
+    }
+  }, {
+    key: 'getSheet',
+    value: function getSheet() {
+      return this.getSheetForTag(this._tags[this._tags.length - 1]);
+    }
+  }, {
+    key: 'insertRule',
+    value: function insertRule(rule, index) {
+      invariant(isString(rule), '`insertRule` accepts only strings');
+
+      if (!this._isBrowser) {
+        if (typeof index !== 'number') {
+          index = this._serverSheet.cssRules.length;
+        }
+        this._serverSheet.insertRule(rule, index);
+        return this._rulesCount++;
+      }
+
+      if (this._optimizeForSpeed) {
+        var sheet = this.getSheet();
+        if (typeof index !== 'number') {
+          index = sheet.cssRules.length;
+        }
+        // this weirdness for perf, and chrome's weird bug
+        // https://stackoverflow.com/questions/20007992/chrome-suddenly-stopped-accepting-insertrule
+        try {
+          sheet.insertRule(rule, index);
+        } catch (err) {
+          if (!isProd) {
+            console.warn('StyleSheet: illegal rule: \n\n' + rule + '\n\nSee https://stackoverflow.com/q/20007992 for more info'); // eslint-disable-line no-console
+          }
+          return -1;
+        }
+      } else {
+        var insertionPoint = this._tags[index];
+        this._tags.push(this.makeStyleTag(this._name, rule, insertionPoint));
+      }
+
+      return this._rulesCount++;
+    }
+  }, {
+    key: 'replaceRule',
+    value: function replaceRule(index, rule) {
+      if (this._optimizeForSpeed || !this._isBrowser) {
+        var sheet = this._isBrowser ? this.getSheet() : this._serverSheet;
+        if (!rule.trim()) {
+          rule = this._deletedRulePlaceholder;
+        }
+
+        if (!sheet.cssRules[index]) {
+          // @TBD Should we throw an error?
+          return index;
+        }
+
+        sheet.deleteRule(index);
+
+        try {
+          sheet.insertRule(rule, index);
+        } catch (err) {
+          if (!isProd) {
+            console.warn('StyleSheet: illegal rule: \n\n' + rule + '\n\nSee https://stackoverflow.com/q/20007992 for more info'); // eslint-disable-line no-console
+          }
+          // In order to preserve the indices we insert a deleteRulePlaceholder
+          sheet.insertRule(this._deletedRulePlaceholder, index);
+        }
+      } else {
+        var tag = this._tags[index];
+        invariant(tag, 'old rule at index `' + index + '` not found');
+        tag.textContent = rule;
+      }
+      return index;
+    }
+  }, {
+    key: 'deleteRule',
+    value: function deleteRule(index) {
+      if (!this._isBrowser) {
+        this._serverSheet.deleteRule(index);
+        return;
+      }
+
+      if (this._optimizeForSpeed) {
+        this.replaceRule(index, '');
+      } else {
+        var tag = this._tags[index];
+        invariant(tag, 'rule at index `' + index + '` not found');
+        tag.parentNode.removeChild(tag);
+        this._tags[index] = null;
+      }
+    }
+  }, {
+    key: 'flush',
+    value: function flush() {
+      this._injected = false;
+      this._rulesCount = 0;
+      if (this._isBrowser) {
+        this._tags.forEach(function (tag) {
+          return tag && tag.parentNode.removeChild(tag);
+        });
+        this._tags = [];
+      } else {
+        // simpler on server
+        this._serverSheet.cssRules = [];
+      }
+    }
+  }, {
+    key: 'cssRules',
+    value: function cssRules() {
+      var _this2 = this;
+
+      if (!this._isBrowser) {
+        return this._serverSheet.cssRules;
+      }
+      return this._tags.reduce(function (rules, tag) {
+        if (tag) {
+          rules = rules.concat(_this2.getSheetForTag(tag).cssRules.map(function (rule) {
+            return rule.cssText === _this2._deletedRulePlaceholder ? null : rule;
+          }));
+        } else {
+          rules.push(null);
+        }
+        return rules;
+      }, []);
+    }
+  }, {
+    key: 'makeStyleTag',
+    value: function makeStyleTag(name, cssString, relativeToTag) {
+      if (cssString) {
+        invariant(isString(cssString), 'makeStyleTag acceps only strings as second parameter');
+      }
+      var tag = document.createElement('style');
+      tag.type = 'text/css';
+      tag.setAttribute('data-' + name, '');
+      if (cssString) {
+        tag.appendChild(document.createTextNode(cssString));
+      }
+      var head = document.head || document.getElementsByTagName('head')[0];
+      if (relativeToTag) {
+        head.insertBefore(tag, relativeToTag);
+      } else {
+        head.appendChild(tag);
+      }
+      return tag;
+    }
+  }, {
+    key: 'length',
+    get: function get() {
+      return this._rulesCount;
+    }
+  }]);
+  return StyleSheet;
+}();
+
+exports.default = StyleSheet;
+
+
+function invariant(condition, message) {
+  if (!condition) {
+    throw new Error('StyleSheet: ' + message + '.');
+  }
+}
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/node-libs-browser/node_modules/process/browser.js")))
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/dist/style.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _map = __webpack_require__("./node_modules/babel-runtime/core-js/map.js");
+
+var _map2 = _interopRequireDefault(_map);
+
+var _slicedToArray2 = __webpack_require__("./node_modules/babel-runtime/helpers/slicedToArray.js");
+
+var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
+
+var _getPrototypeOf = __webpack_require__("./node_modules/babel-runtime/core-js/object/get-prototype-of.js");
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = __webpack_require__("./node_modules/babel-runtime/helpers/classCallCheck.js");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__("./node_modules/babel-runtime/helpers/createClass.js");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = __webpack_require__("./node_modules/babel-runtime/helpers/possibleConstructorReturn.js");
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__("./node_modules/babel-runtime/helpers/inherits.js");
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+exports.flush = flush;
+
+var _react = __webpack_require__("./node_modules/react/cjs/react.development.js");
+
+var _stylesheetRegistry = __webpack_require__("./node_modules/styled-jsx/dist/stylesheet-registry.js");
+
+var _stylesheetRegistry2 = _interopRequireDefault(_stylesheetRegistry);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var styleSheetRegistry = new _stylesheetRegistry2.default();
+
+var JSXStyle = function (_Component) {
+  (0, _inherits3.default)(JSXStyle, _Component);
+
+  function JSXStyle() {
+    (0, _classCallCheck3.default)(this, JSXStyle);
+    return (0, _possibleConstructorReturn3.default)(this, (JSXStyle.__proto__ || (0, _getPrototypeOf2.default)(JSXStyle)).apply(this, arguments));
+  }
+
+  (0, _createClass3.default)(JSXStyle, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      styleSheetRegistry.add(this.props);
+    }
+  }, {
+    key: 'shouldComponentUpdate',
+    value: function shouldComponentUpdate(nextProps) {
+      return this.props.css !== nextProps.css;
+    }
+
+    // To avoid FOUC, we process new changes
+    // on `componentWillUpdate` rather than `componentDidUpdate`.
+
+  }, {
+    key: 'componentWillUpdate',
+    value: function componentWillUpdate(nextProps) {
+      styleSheetRegistry.update(this.props, nextProps);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      styleSheetRegistry.remove(this.props);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return null;
+    }
+  }], [{
+    key: 'dynamic',
+    value: function dynamic(info) {
+      return info.map(function (tagInfo) {
+        var _tagInfo = (0, _slicedToArray3.default)(tagInfo, 2),
+            baseId = _tagInfo[0],
+            props = _tagInfo[1];
+
+        return styleSheetRegistry.computeId(baseId, props);
+      }).join(' ');
+    }
+  }]);
+  return JSXStyle;
+}(_react.Component);
+
+exports.default = JSXStyle;
+function flush() {
+  var cssRules = styleSheetRegistry.cssRules();
+  styleSheetRegistry.flush();
+  return new _map2.default(cssRules);
+}
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/dist/stylesheet-registry.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _keys = __webpack_require__("./node_modules/babel-runtime/core-js/object/keys.js");
+
+var _keys2 = _interopRequireDefault(_keys);
+
+var _classCallCheck2 = __webpack_require__("./node_modules/babel-runtime/helpers/classCallCheck.js");
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = __webpack_require__("./node_modules/babel-runtime/helpers/createClass.js");
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _stringHash = __webpack_require__("./node_modules/string-hash/index.js");
+
+var _stringHash2 = _interopRequireDefault(_stringHash);
+
+var _stylesheet = __webpack_require__("./node_modules/styled-jsx/dist/lib/stylesheet.js");
+
+var _stylesheet2 = _interopRequireDefault(_stylesheet);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var StyleSheetRegistry = function () {
+  function StyleSheetRegistry() {
+    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+        _ref$styleSheet = _ref.styleSheet,
+        styleSheet = _ref$styleSheet === undefined ? null : _ref$styleSheet,
+        _ref$optimizeForSpeed = _ref.optimizeForSpeed,
+        optimizeForSpeed = _ref$optimizeForSpeed === undefined ? false : _ref$optimizeForSpeed,
+        _ref$isBrowser = _ref.isBrowser,
+        isBrowser = _ref$isBrowser === undefined ? typeof window !== 'undefined' : _ref$isBrowser;
+
+    (0, _classCallCheck3.default)(this, StyleSheetRegistry);
+
+    this._sheet = styleSheet || new _stylesheet2.default({
+      name: 'styled-jsx',
+      optimizeForSpeed: optimizeForSpeed
+    });
+    this._sheet.inject();
+    this._isBrowser = isBrowser;
+
+    this._fromServer = undefined;
+    this._indices = {};
+    this._instancesCounts = {};
+
+    this.computeId = this.createComputeId();
+    this.computeSelector = this.createComputeSelector();
+  }
+
+  (0, _createClass3.default)(StyleSheetRegistry, [{
+    key: 'add',
+    value: function add(props) {
+      var _this = this;
+
+      if (undefined === this._optimizeForSpeed) {
+        this._optimizeForSpeed = Array.isArray(props.css);
+        this._sheet.setOptimizeForSpeed(this._optimizeForSpeed);
+        this._optimizeForSpeed = this._sheet.isOptimizeForSpeed();
+      }
+
+      if (this._isBrowser && !this._fromServer) {
+        this._fromServer = this.selectFromServer();
+        this._instancesCounts = (0, _keys2.default)(this._fromServer).reduce(function (acc, tagName) {
+          acc[tagName] = 0;
+          return acc;
+        }, {});
+      }
+
+      var _getIdAndRules = this.getIdAndRules(props),
+          styleId = _getIdAndRules.styleId,
+          rules = _getIdAndRules.rules;
+
+      // Deduping: just increase the instances count.
+
+
+      if (styleId in this._instancesCounts) {
+        this._instancesCounts[styleId] += 1;
+        return;
+      }
+
+      var indices = rules.map(function (rule) {
+        return _this._sheet.insertRule(rule);
+      })
+      // Filter out invalid rules
+      .filter(function (index) {
+        return index !== -1;
+      });
+
+      if (indices.length > 0) {
+        this._indices[styleId] = indices;
+        this._instancesCounts[styleId] = 1;
+      }
+    }
+  }, {
+    key: 'remove',
+    value: function remove(props) {
+      var _this2 = this;
+
+      var _getIdAndRules2 = this.getIdAndRules(props),
+          styleId = _getIdAndRules2.styleId;
+
+      invariant(styleId in this._instancesCounts, 'styleId: `' + styleId + '` not found');
+      this._instancesCounts[styleId] -= 1;
+
+      if (this._instancesCounts[styleId] < 1) {
+        var tagFromServer = this._fromServer && this._fromServer[styleId];
+        if (tagFromServer) {
+          tagFromServer.parentNode.removeChild(tagFromServer);
+          delete this._fromServer[styleId];
+        } else {
+          this._indices[styleId].forEach(function (index) {
+            return _this2._sheet.deleteRule(index);
+          });
+          delete this._indices[styleId];
+        }
+        delete this._instancesCounts[styleId];
+      }
+    }
+  }, {
+    key: 'update',
+    value: function update(props, nextProps) {
+      this.add(nextProps);
+      this.remove(props);
+    }
+  }, {
+    key: 'flush',
+    value: function flush() {
+      this._sheet.flush();
+      this._sheet.inject();
+      this._fromServer = undefined;
+      this._indices = {};
+      this._instancesCounts = {};
+
+      this.computeId = this.createComputeId();
+      this.computeSelector = this.createComputeSelector();
+    }
+  }, {
+    key: 'cssRules',
+    value: function cssRules() {
+      var _this3 = this;
+
+      var fromServer = this._fromServer ? (0, _keys2.default)(this._fromServer).map(function (styleId) {
+        return [styleId, _this3._fromServer[styleId]];
+      }) : [];
+      var cssRules = this._sheet.cssRules();
+
+      return fromServer.concat((0, _keys2.default)(this._indices).map(function (styleId) {
+        return [styleId, _this3._indices[styleId].map(function (index) {
+          return cssRules[index].cssText;
+        }).join('\n')];
+      }));
+    }
+
+    /**
+     * createComputeId
+     *
+     * Creates a function to compute and memoize a jsx id from a basedId and optionally props.
+     */
+
+  }, {
+    key: 'createComputeId',
+    value: function createComputeId() {
+      var cache = {};
+      return function (baseId, props) {
+        if (!props) {
+          return 'jsx-' + baseId;
+        }
+        var propsToString = String(props);
+        var key = baseId + propsToString;
+        // return `jsx-${hashString(`${baseId}-${propsToString}`)}`
+        if (!cache[key]) {
+          cache[key] = 'jsx-' + (0, _stringHash2.default)(baseId + '-' + propsToString);
+        }
+        return cache[key];
+      };
+    }
+
+    /**
+     * createComputeSelector
+     *
+     * Creates a function to compute and memoize dynamic selectors.
+     */
+
+  }, {
+    key: 'createComputeSelector',
+    value: function createComputeSelector() {
+      var selectoPlaceholderRegexp = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : /__jsx-style-dynamic-selector/g;
+
+      var cache = {};
+      return function (id, css) {
+        var idcss = id + css;
+        if (!cache[idcss]) {
+          cache[idcss] = css.replace(selectoPlaceholderRegexp, id);
+        }
+        return cache[idcss];
+      };
+    }
+  }, {
+    key: 'getIdAndRules',
+    value: function getIdAndRules(props) {
+      var _this4 = this;
+
+      if (props.dynamic) {
+        var styleId = this.computeId(props.styleId, props.dynamic);
+        return {
+          styleId: styleId,
+          rules: Array.isArray(props.css) ? props.css.map(function (rule) {
+            return _this4.computeSelector(styleId, rule);
+          }) : [this.computeSelector(styleId, props.css)]
+        };
+      }
+
+      return {
+        styleId: this.computeId(props.styleId),
+        rules: Array.isArray(props.css) ? props.css : [props.css]
+      };
+    }
+
+    /**
+     * selectFromServer
+     *
+     * Collects style tags from the document with id __jsx-XXX
+     */
+
+  }, {
+    key: 'selectFromServer',
+    value: function selectFromServer() {
+      var elements = Array.prototype.slice.call(document.querySelectorAll('[id^="__jsx-"]'));
+
+      return elements.reduce(function (acc, element) {
+        var id = element.id.slice(2);
+        acc[id] = element;
+        return acc;
+      }, {});
+    }
+  }]);
+  return StyleSheetRegistry;
+}();
+
+exports.default = StyleSheetRegistry;
+
+
+function invariant(condition, message) {
+  if (!condition) {
+    throw new Error('StyleSheetRegistry: ' + message + '.');
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/styled-jsx/style.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./node_modules/styled-jsx/dist/style.js")
 
 
 /***/ }),
@@ -51238,7 +51952,230 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/properties.js":
+/***/ "./pages/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__withReduxSaga__ = __webpack_require__("./withReduxSaga/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_mainLayout__ = __webpack_require__("./components/mainLayout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_repo__ = __webpack_require__("./components/repo.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__store__ = __webpack_require__("./store/index.js");
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/pages/index.js';
+
+(function () {
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+
+
+
+
+
+
+function Home(props) {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_2__components_mainLayout__["a" /* default */],
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      }
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_repo__["a" /* default */], _extends({}, props, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      }
+    }))
+  );
+}
+
+function mapStateToProps(state) {
+  var repoId = state.repo.id,
+      repo = state.entities.repos[repoId] || {};
+  return {
+    repo: repo
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    getRepo: function getRepo() {
+      return dispatch({ type: 'GET_REPO' });
+    }
+  };
+}
+
+var _default = Object(__WEBPACK_IMPORTED_MODULE_1__withReduxSaga__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_4__store__["a" /* default */], mapStateToProps, mapDispatchToProps)(Home, { type: 'GET_REPO' });
+
+/* harmony default export */ __webpack_exports__["default"] = (_default);
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
+
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(Home, 'Home', '/home/sachin/Documents/react/react-nextjs-ssr/pages/index.js');
+  reactHotLoader.register(mapStateToProps, 'mapStateToProps', '/home/sachin/Documents/react/react-nextjs-ssr/pages/index.js');
+  reactHotLoader.register(mapDispatchToProps, 'mapDispatchToProps', '/home/sachin/Documents/react/react-nextjs-ssr/pages/index.js');
+  reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/pages/index.js');
+  leaveModule(module);
+})();
+
+;
+    (function (Component, route) {
+      if(!Component) return
+      if (false) return
+      module.hot.accept()
+      Component.__route = route
+
+      if (module.hot.status() === 'idle') return
+
+      var components = next.router.components
+      for (var r in components) {
+        if (!components.hasOwnProperty(r)) continue
+
+        if (components[r].Component.__route === route) {
+          next.router.update(r, Component)
+        }
+      }
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/")
+  
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
+/***/ "./pages/movie.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("./node_modules/next/node_modules/prop-types/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_mainLayout__ = __webpack_require__("./components/mainLayout.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__withReduxSaga__ = __webpack_require__("./withReduxSaga/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_movieDetail__ = __webpack_require__("./components/movieDetail.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__store__ = __webpack_require__("./store/index.js");
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/pages/movie.js';
+
+(function () {
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+
+
+
+
+
+
+
+function Movie(props) {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_2__components_mainLayout__["a" /* default */],
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      }
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'h1',
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 11
+        }
+      },
+      'Movie'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_movieDetail__["a" /* default */], _extends({}, props, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      }
+    }))
+  );
+}
+
+Movie.propTypes = {
+  url: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
+};
+
+function mapStateToProps(state, ownProps) {
+  var url = ownProps.url;
+
+  var id = url.query.id;
+  var movie = state.entities.movies[id] || {};
+  return {
+    movie: movie
+  };
+}
+
+var _default = Object(__WEBPACK_IMPORTED_MODULE_3__withReduxSaga__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_5__store__["a" /* default */], mapStateToProps)(Movie, {
+  server: { type: 'GET_MOVIE_SERVER' },
+  client: { type: 'GET_MOVIE' }
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (_default);
+;
+
+(function () {
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
+
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(Movie, 'Movie', '/home/sachin/Documents/react/react-nextjs-ssr/pages/movie.js');
+  reactHotLoader.register(mapStateToProps, 'mapStateToProps', '/home/sachin/Documents/react/react-nextjs-ssr/pages/movie.js');
+  reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/pages/movie.js');
+  leaveModule(module);
+})();
+
+;
+    (function (Component, route) {
+      if(!Component) return
+      if (false) return
+      module.hot.accept()
+      Component.__route = route
+
+      if (module.hot.status() === 'idle') return
+
+      var components = next.router.components
+      for (var r in components) {
+        if (!components.hasOwnProperty(r)) continue
+
+        if (components[r].Component.__route === route) {
+          next.router.update(r, Component)
+        }
+      }
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/movie")
+  
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
+
+/***/ }),
+
+/***/ "./pages/movies.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51248,16 +52185,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__withReduxSaga__ = __webpack_require__("./withReduxSaga/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_head__ = __webpack_require__("./components/head.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_mainLayout__ = __webpack_require__("./components/mainLayout.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_propertyList__ = __webpack_require__("./components/propertyList.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_movieList__ = __webpack_require__("./components/movieList.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__store__ = __webpack_require__("./store/index.js");
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/pages/properties.js';
+var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/pages/movies.js';
 
 (function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
+  var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
 
-    enterModule && enterModule(module);
+  enterModule && enterModule(module);
 })();
 
 
@@ -51267,68 +52204,67 @@ var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/pages/properti
 
 
 
-function Properties(props) {
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_3__components_mainLayout__["a" /* default */],
-        {
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 10
-            }
-        },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_head__["a" /* default */], { title: 'Movies', __source: {
-                fileName: _jsxFileName,
-                lineNumber: 11
-            }
-        }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h1',
-            {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 12
-                }
-            },
-            'Movies'
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_propertyList__["a" /* default */], _extends({}, props, {
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 13
-            }
-        }))
-    );
+function Movies(props) {
+  console.log("Movies props ==>>>", props);
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_3__components_mainLayout__["a" /* default */],
+    {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      }
+    },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_head__["a" /* default */], { title: 'Movies', __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      }
+    }),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'h1',
+      {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13
+        }
+      },
+      'Movies'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_movieList__["a" /* default */], _extends({}, props, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      }
+    }))
+  );
 }
 
 function mapStateToProps(state) {
-    return {
-
-        // movies: state.properties.list.map(id => state.entities.properties[id]) || [],
-        //isFetching: state.properties.isFetching,
-
-        movies: state.properties.list || [],
-        isFetching: state.properties.isFetching
-    };
+  return {
+    movies: state.movies.list.map(function (id) {
+      return state.entities.movies[id];
+    }) || [],
+    isFetching: state.movies.isFetching
+  };
 }
 
-var _default = Object(__WEBPACK_IMPORTED_MODULE_1__withReduxSaga__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_5__store__["a" /* default */], mapStateToProps)(Properties, { type: 'GET_PROPERTY' });
+var _default = Object(__WEBPACK_IMPORTED_MODULE_1__withReduxSaga__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_5__store__["a" /* default */], mapStateToProps)(Movies, { type: 'GET_MOVIES' });
 
 /* harmony default export */ __webpack_exports__["default"] = (_default);
 ;
 
 (function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
+  var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
 
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
+  var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
 
-    if (!reactHotLoader) {
-        return;
-    }
+  if (!reactHotLoader) {
+    return;
+  }
 
-    reactHotLoader.register(Properties, 'Properties', '/home/sachin/Documents/react/react-nextjs-ssr/pages/properties.js');
-    reactHotLoader.register(mapStateToProps, 'mapStateToProps', '/home/sachin/Documents/react/react-nextjs-ssr/pages/properties.js');
-    reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/pages/properties.js');
-    leaveModule(module);
+  reactHotLoader.register(Movies, 'Movies', '/home/sachin/Documents/react/react-nextjs-ssr/pages/movies.js');
+  reactHotLoader.register(mapStateToProps, 'mapStateToProps', '/home/sachin/Documents/react/react-nextjs-ssr/pages/movies.js');
+  reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/pages/movies.js');
+  leaveModule(module);
 })();
 
 ;
@@ -51348,437 +52284,7 @@ var _default = Object(__WEBPACK_IMPORTED_MODULE_1__withReduxSaga__["a" /* defaul
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/properties")
-  
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
-
-/***/ }),
-
-/***/ "./pages/property.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/cjs/react.development.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__("./node_modules/next/node_modules/prop-types/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_Components_mainLayout__ = __webpack_require__("./components/mainLayout.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__withReduxSaga__ = __webpack_require__("./withReduxSaga/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_Components_propertyDetail__ = __webpack_require__("./components/propertyDetail.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__store__ = __webpack_require__("./store/index.js");
-var _jsxFileName = '/home/sachin/Documents/react/react-nextjs-ssr/pages/property.js';
-
-(function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
-
-    enterModule && enterModule(module);
-})();
-
-
-
-
-
-
-
-
-function Property(props) {
-    console.log("Property==>>>@@@@", props);
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_2_Components_mainLayout__["a" /* default */],
-        {
-            __source: {
-                fileName: _jsxFileName,
-                lineNumber: 11
-            }
-        },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'h1',
-            {
-                __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 12
-                }
-            },
-            'Property Details'
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'section',
-            { 'class': 'about-section', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 15
-                }
-            },
-            props.property.length ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
-                { role: 'tabpanel', 'class': 'tab-pane active', id: 'propertyDetails', __source: {
-                        fileName: _jsxFileName,
-                        lineNumber: 19
-                    }
-                },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { 'class': 'title text-left', __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 20
-                        }
-                    },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'h3',
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 21
-                            }
-                        },
-                        props.property[0].title
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'table',
-                    { 'class': 'table table-border-none', __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 23
-                        }
-                    },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'tbody',
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 24
-                            }
-                        },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'tr',
-                            {
-                                __source: {
-                                    fileName: _jsxFileName,
-                                    lineNumber: 25
-                                }
-                            },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'td',
-                                {
-                                    __source: {
-                                        fileName: _jsxFileName,
-                                        lineNumber: 26
-                                    }
-                                },
-                                'Listing Price'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'td',
-                                { 'class': 'font-lg', __source: {
-                                        fileName: _jsxFileName,
-                                        lineNumber: 27
-                                    }
-                                },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'span',
-                                    {
-                                        __source: {
-                                            fileName: _jsxFileName,
-                                            lineNumber: 28
-                                        }
-                                    },
-                                    props.property[0].price
-                                )
-                            )
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { 'class': 'title-border', __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 33
-                        }
-                    },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'h4',
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 34
-                            }
-                        },
-                        'PROPERTY INFORMATION'
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'table',
-                    { 'class': 'table table-border-none', __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 36
-                        }
-                    },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'tbody',
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 37
-                            }
-                        },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'tr',
-                            {
-                                __source: {
-                                    fileName: _jsxFileName,
-                                    lineNumber: 38
-                                }
-                            },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'td',
-                                {
-                                    __source: {
-                                        fileName: _jsxFileName,
-                                        lineNumber: 39
-                                    }
-                                },
-                                'Property Type'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'td',
-                                {
-                                    __source: {
-                                        fileName: _jsxFileName,
-                                        lineNumber: 40
-                                    }
-                                },
-                                props.property[0].listing_group
-                            )
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { 'class': 'title-border', __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 44
-                        }
-                    },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'h4',
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 45
-                            }
-                        },
-                        'DETAILS'
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'table',
-                    { 'class': 'table table-border-none', __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 47
-                        }
-                    },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'tbody',
-                        {
-                            __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 48
-                            }
-                        },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'tr',
-                            {
-                                __source: {
-                                    fileName: _jsxFileName,
-                                    lineNumber: 49
-                                }
-                            },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'td',
-                                {
-                                    __source: {
-                                        fileName: _jsxFileName,
-                                        lineNumber: 50
-                                    }
-                                },
-                                'Building Square Feet'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'td',
-                                {
-                                    __source: {
-                                        fileName: _jsxFileName,
-                                        lineNumber: 51
-                                    }
-                                },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'span',
-                                    {
-                                        __source: {
-                                            fileName: _jsxFileName,
-                                            lineNumber: 52
-                                        }
-                                    },
-                                    props.property[0].square_feet
-                                )
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'tr',
-                            {
-                                __source: {
-                                    fileName: _jsxFileName,
-                                    lineNumber: 55
-                                }
-                            },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'td',
-                                {
-                                    __source: {
-                                        fileName: _jsxFileName,
-                                        lineNumber: 56
-                                    }
-                                },
-                                'Cap Rate'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'td',
-                                {
-                                    __source: {
-                                        fileName: _jsxFileName,
-                                        lineNumber: 57
-                                    }
-                                },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    'span',
-                                    {
-                                        __source: {
-                                            fileName: _jsxFileName,
-                                            lineNumber: 58
-                                        }
-                                    },
-                                    props.property[0].cap_rate
-                                )
-                            )
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    {
-                        __source: {
-                            fileName: _jsxFileName,
-                            lineNumber: 63
-                        }
-                    },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { 'class': 'title-border', __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 64
-                            }
-                        },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'h4',
-                            {
-                                __source: {
-                                    fileName: _jsxFileName,
-                                    lineNumber: 65
-                                }
-                            },
-                            'DESCRIPTION'
-                        )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { 'class': 'mr-bottom-20', __source: {
-                                fileName: _jsxFileName,
-                                lineNumber: 67
-                            }
-                        },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'p',
-                            {
-                                __source: {
-                                    fileName: _jsxFileName,
-                                    lineNumber: 68
-                                }
-                            },
-                            props.property[0].description
-                        )
-                    )
-                )
-            ) : null
-        )
-    );
-}
-
-Property.propTypes = {
-    url: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
-};
-
-function mapStateToProps(state, ownProps) {
-    var url = ownProps.url;
-
-    var id = url.query.id;
-    console.log("state properties ==>>>>", state.properties);
-    var property = state.properties.list || {};
-    console.log("moviemoviemovie==>>>", property);
-    return {
-        property: property
-    };
-
-    // const { url } = ownProps;
-    // const id = url.query.id;
-    // console.log("state.entities==>>>", state.entities)
-    // const property = state.properties[id] || {};
-    // return {
-    //     property,
-    // };
-
-}
-
-var _default = Object(__WEBPACK_IMPORTED_MODULE_3__withReduxSaga__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_5__store__["a" /* default */], mapStateToProps)(Property, {
-    server: { type: 'GET_PROPERTY_SERVER' },
-    client: { type: 'GET_PROPERTY' }
-});
-
-/* harmony default export */ __webpack_exports__["default"] = (_default);
-;
-
-(function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
-
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
-
-    if (!reactHotLoader) {
-        return;
-    }
-
-    reactHotLoader.register(Property, 'Property', '/home/sachin/Documents/react/react-nextjs-ssr/pages/property.js');
-    reactHotLoader.register(mapStateToProps, 'mapStateToProps', '/home/sachin/Documents/react/react-nextjs-ssr/pages/property.js');
-    reactHotLoader.register(_default, 'default', '/home/sachin/Documents/react/react-nextjs-ssr/pages/property.js');
-    leaveModule(module);
-})();
-
-;
-    (function (Component, route) {
-      if(!Component) return
-      if (false) return
-      module.hot.accept()
-      Component.__route = route
-
-      if (module.hot.status() === 'idle') return
-
-      var components = next.router.components
-      for (var r in components) {
-        if (!components.hasOwnProperty(r)) continue
-
-        if (components[r].Component.__route === route) {
-          next.router.update(r, Component)
-        }
-      }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/property")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/movies")
   
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
 
@@ -51808,7 +52314,7 @@ function entities() {
   var action = arguments[1];
   var payload = action.payload;
 
-  console.log("payload==>>>", payload);
+  console.log("entities reducer ==>>>", payload);
   if (payload !== undefined && payload.entities !== undefined) {
     return __WEBPACK_IMPORTED_MODULE_0_lodash_merge___default()({}, state, payload.entities);
   }
@@ -51844,7 +52350,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__repo__ = __webpack_require__("./reducers/repo.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__movies__ = __webpack_require__("./reducers/movies.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__entities__ = __webpack_require__("./reducers/entities.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__properties__ = __webpack_require__("./reducers/properties.js");
 (function () {
   var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
 
@@ -51856,12 +52361,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
 var _default = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["c" /* combineReducers */])({
   repo: __WEBPACK_IMPORTED_MODULE_1__repo__["a" /* default */],
   movies: __WEBPACK_IMPORTED_MODULE_2__movies__["a" /* default */],
-  entities: __WEBPACK_IMPORTED_MODULE_3__entities__["a" /* default */],
-  properties: __WEBPACK_IMPORTED_MODULE_4__properties__["a" /* default */]
+  entities: __WEBPACK_IMPORTED_MODULE_3__entities__["a" /* default */]
 });
 
 /* harmony default export */ __webpack_exports__["default"] = (_default);
@@ -51908,6 +52411,7 @@ function movies() {
         isFetching: true
       });
     case 'GET_MOVIES_FULFILLED':
+      console.log("movies reduer payload===>>", payload);
       return Object.assign({}, state, {
         isFetching: false,
         list: payload.result
@@ -51934,66 +52438,6 @@ function movies() {
 
   reactHotLoader.register(movies, 'movies', '/home/sachin/Documents/react/react-nextjs-ssr/reducers/movies.js');
   leaveModule(module);
-})();
-
-;
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
-
-/***/ }),
-
-/***/ "./reducers/properties.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony export (immutable) */ __webpack_exports__["a"] = properties;
-(function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
-
-    enterModule && enterModule(module);
-})();
-
-function properties() {
-    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { list: [], isFetching: false, error: '' };
-    var action = arguments[1];
-
-    console.log("reducer action==>>>", action);
-    var type = action.type,
-        payload = action.payload;
-
-    switch (type) {
-        case 'GET_PROPERTY_PENDING':
-            return Object.assign({}, state, {
-                isFetching: true
-            });
-
-        case 'GET_PROPERTY_FULFILLED':
-            console.log("reducer payload ==>>>", payload);
-            return Object.assign({}, state, {
-                isFetching: false,
-                list: payload
-            });
-        case 'GET_MOVIES_REJECTED':
-            return Object.assign({}, state, {
-                isFetching: false,
-                error: 'An Error Ocurred'
-            });
-        default:
-            return state;
-    }
-}
-;
-
-(function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
-
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
-
-    if (!reactHotLoader) {
-        return;
-    }
-
-    reactHotLoader.register(properties, 'properties', '/home/sachin/Documents/react/react-nextjs-ssr/reducers/properties.js');
-    leaveModule(module);
 })();
 
 ;
@@ -52072,7 +52516,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__ = __webpack_require__("./node_modules/redux-saga/es/effects.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__repoSagas__ = __webpack_require__("./sagas/repoSagas.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__movieSagas__ = __webpack_require__("./sagas/movieSagas.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__propertySagas__ = __webpack_require__("./sagas/propertySagas.js");
 
 
 (function () {
@@ -52089,14 +52532,13 @@ var _marked = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator
 
 
 
-
 function serverSagas() {
   return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function serverSagas$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* all */])([Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_3__movieSagas__["a" /* fetchMovieServer */]), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_4__propertySagas__["b" /* fetchPropertyServer */])]);
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* all */])([Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_3__movieSagas__["a" /* fetchMovieServer */])]);
 
         case 2:
         case 'end':
@@ -52112,7 +52554,7 @@ function clientSagas() {
       switch (_context2.prev = _context2.next) {
         case 0:
           _context2.next = 2;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* all */])([Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_2__repoSagas__["a" /* default */]), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_3__movieSagas__["c" /* watchFetchMovies */]), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_3__movieSagas__["b" /* watchFetchMovie */]), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_4__propertySagas__["a" /* fetchPropertyData */])]);
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["b" /* all */])([Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_2__repoSagas__["a" /* default */]), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_3__movieSagas__["c" /* watchFetchMovies */]), Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(__WEBPACK_IMPORTED_MODULE_3__movieSagas__["b" /* watchFetchMovie */])]);
 
         case 2:
         case 'end':
@@ -52210,33 +52652,35 @@ function fetchmovies() {
 
         case 3:
           _context.next = 5;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* call */])(__WEBPACK_IMPORTED_MODULE_2__libs_http__["a" /* get */], baseUrl + 'discover/movie?api_key=' + apiKey, {
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* call */])(__WEBPACK_IMPORTED_MODULE_2__libs_http__["a" /* get */], 'https://devapi.biproxi.com/v1/activity/mostviewed', {
             transformResponse: [function (data) {
-              return Object(__WEBPACK_IMPORTED_MODULE_3__libs_normalize__["b" /* normalize */])(Object(__WEBPACK_IMPORTED_MODULE_4__libs_parseResponse__["a" /* default */])(data).results, __WEBPACK_IMPORTED_MODULE_3__libs_normalize__["a" /* moviesArraySchema */]);
+              return Object(__WEBPACK_IMPORTED_MODULE_3__libs_normalize__["c" /* normalize */])(Object(__WEBPACK_IMPORTED_MODULE_4__libs_parseResponse__["a" /* default */])(data).data, __WEBPACK_IMPORTED_MODULE_3__libs_normalize__["a" /* moviesArraySchema */]);
             }]
           });
 
         case 5:
           response = _context.sent;
-          _context.next = 8;
+
+          console.log("movies saga response ==>>>", response);
+          _context.next = 9;
           return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIES_FULFILLED', payload: response.data });
 
-        case 8:
-          _context.next = 14;
+        case 9:
+          _context.next = 15;
           break;
 
-        case 10:
-          _context.prev = 10;
+        case 11:
+          _context.prev = 11;
           _context.t0 = _context['catch'](0);
-          _context.next = 14;
+          _context.next = 15;
           return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIES_REJECTED' });
 
-        case 14:
+        case 15:
         case 'end':
           return _context.stop();
       }
     }
-  }, _marked, this, [[0, 10]]);
+  }, _marked, this, [[0, 11]]);
 }
 
 function fetchMovie(action) {
@@ -52254,17 +52698,16 @@ function fetchMovie(action) {
           _context2.next = 6;
           return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* call */])(__WEBPACK_IMPORTED_MODULE_2__libs_http__["a" /* get */], 'https://devapi.biproxi.com/v1/listing?listing_id=' + id, {
             transformResponse: [function (data) {
-              return data;
+              return Object(__WEBPACK_IMPORTED_MODULE_3__libs_normalize__["c" /* normalize */])(Object(__WEBPACK_IMPORTED_MODULE_4__libs_parseResponse__["a" /* default */])(data).data, __WEBPACK_IMPORTED_MODULE_3__libs_normalize__["b" /* moviesSchema */]);
             }]
           });
 
         case 6:
           response = _context2.sent;
 
-
-          console.log("response==>>>", response);
+          console.log("single movie response ==>>>", response);
           _context2.next = 10;
-          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIE_FULFILLED', payload: response.data.data });
+          return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_MOVIE_FULFILLED', payload: response.data });
 
         case 10:
           _context2.next = 17;
@@ -52382,158 +52825,6 @@ function fetchMovieServer() {
 
 /***/ }),
 
-/***/ "./sagas/propertySagas.js":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(module) {/* harmony export (immutable) */ __webpack_exports__["a"] = fetchPropertyData;
-/* harmony export (immutable) */ __webpack_exports__["b"] = fetchPropertyServer;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__("./node_modules/babel-runtime/regenerator/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__ = __webpack_require__("./node_modules/redux-saga/es/effects.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__libs_http__ = __webpack_require__("./libs/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__libs_normalize__ = __webpack_require__("./libs/normalize.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__libs_parseResponse__ = __webpack_require__("./libs/parseResponse.js");
-
-
-(function () {
-    var enterModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").enterModule;
-
-    enterModule && enterModule(module);
-})();
-
-var _marked = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(fetchProperty),
-    _marked2 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(fetchPropertyData),
-    _marked3 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(fetchPropertyServer);
-
-
-
-
-
-
-function fetchProperty(action) {
-    var id, response;
-    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchProperty$(_context) {
-        while (1) {
-            switch (_context.prev = _context.next) {
-                case 0:
-                    console.log("action==>>>", action);
-                    id = action.query.id;
-                    _context.prev = 2;
-                    _context.next = 5;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_PROPERTY_PENDING' });
-
-                case 5:
-                    _context.next = 7;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* call */])(__WEBPACK_IMPORTED_MODULE_2__libs_http__["a" /* get */], 'https://devapi.biproxi.com/v1/listing?listing_id=' + id, {
-                        transformResponse: [function (data) {
-                            return data;
-                        }]
-                    });
-
-                case 7:
-                    response = _context.sent;
-
-
-                    console.log("response==>>>", response);
-                    _context.next = 11;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_PROPERTY_FULFILLED', payload: response.data.data });
-
-                case 11:
-                    _context.next = 18;
-                    break;
-
-                case 13:
-                    _context.prev = 13;
-                    _context.t0 = _context['catch'](2);
-
-                    console.warn("error==>>>", _context.t0);
-                    _context.next = 18;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["e" /* put */])({ type: 'GET_PROPERTY_REJECTED' });
-
-                case 18:
-                case 'end':
-                    return _context.stop();
-            }
-        }
-    }, _marked, this, [[2, 13]]);
-}
-
-function fetchPropertyData() {
-    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchPropertyData$(_context2) {
-        while (1) {
-            switch (_context2.prev = _context2.next) {
-                case 0:
-                    _context2.next = 2;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["g" /* takeEvery */])('GET_PROPERTY', fetchProperty);
-
-                case 2:
-                case 'end':
-                    return _context2.stop();
-            }
-        }
-    }, _marked2, this);
-}
-
-function fetchPropertyServer() {
-    var action;
-    return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function fetchPropertyServer$(_context3) {
-        while (1) {
-            switch (_context3.prev = _context3.next) {
-                case 0:
-                    _context3.next = 2;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["f" /* take */])('GET_PROPERTY_SERVER');
-
-                case 2:
-                    action = _context3.sent;
-
-                case 3:
-                    if (!(action !== __WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["END"])) {
-                        _context3.next = 11;
-                        break;
-                    }
-
-                    _context3.next = 6;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["d" /* fork */])(fetchPropertyData, action);
-
-                case 6:
-                    _context3.next = 8;
-                    return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["f" /* take */])('GET_PROPERTY_SERVER');
-
-                case 8:
-                    action = _context3.sent;
-                    _context3.next = 3;
-                    break;
-
-                case 11:
-                case 'end':
-                    return _context3.stop();
-            }
-        }
-    }, _marked3, this);
-}
-;
-
-(function () {
-    var reactHotLoader = __webpack_require__("./node_modules/react-hot-loader/patch.js").default;
-
-    var leaveModule = __webpack_require__("./node_modules/react-hot-loader/patch.js").leaveModule;
-
-    if (!reactHotLoader) {
-        return;
-    }
-
-    reactHotLoader.register(fetchProperty, 'fetchProperty', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
-    reactHotLoader.register(fetchPropertyData, 'fetchPropertyData', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
-    reactHotLoader.register(fetchPropertyServer, 'fetchPropertyServer', '/home/sachin/Documents/react/react-nextjs-ssr/sagas/propertySagas.js');
-    leaveModule(module);
-})();
-
-;
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__("./node_modules/webpack/buildin/harmony-module.js")(module)))
-
-/***/ }),
-
 /***/ "./sagas/repoSagas.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -52573,7 +52864,7 @@ function fetchRepo() {
           _context.next = 5;
           return Object(__WEBPACK_IMPORTED_MODULE_1_redux_saga_effects__["c" /* call */])(__WEBPACK_IMPORTED_MODULE_2__libs_http__["a" /* get */], 'https://api.github.com/repos/batusai513/possessive', {
             transformResponse: [function (data) {
-              return Object(__WEBPACK_IMPORTED_MODULE_3__libs_normalize__["b" /* normalize */])(data, __WEBPACK_IMPORTED_MODULE_3__libs_normalize__["c" /* reposSchema */]);
+              return Object(__WEBPACK_IMPORTED_MODULE_3__libs_normalize__["c" /* normalize */])(data, __WEBPACK_IMPORTED_MODULE_3__libs_normalize__["d" /* reposSchema */]);
             }]
           });
 
@@ -52650,8 +52941,6 @@ var routes = __webpack_require__("./node_modules/next-routes/dist/index.js")();
 module.exports = routes;
 
 routes.add('movie', '/movies/:id', 'movie');
-routes.add('properties', 'properties');
-routes.add('property', '/property/:id', 'property');
 ;
 
 (function () {
@@ -53036,7 +53325,7 @@ module.exports = __webpack_require__("./node_modules/next/dist/pages/_error.js")
 /***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./pages/properties.js");
+module.exports = __webpack_require__("./pages/index.js");
 
 
 /***/ }),
@@ -53044,7 +53333,15 @@ module.exports = __webpack_require__("./pages/properties.js");
 /***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./pages/property.js");
+module.exports = __webpack_require__("./pages/movies.js");
+
+
+/***/ }),
+
+/***/ 4:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./pages/movie.js");
 
 
 /***/ })
